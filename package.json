@@ -29,6 +29,8 @@
   "dependencies": {
     "@agentuity/sdk": "^0.0.136",
     "@ai-sdk/openai": "^2.0.3",
-    "ai": "^5.0.3"
+    "ai": "^5.0.3",
+    "js-sha256": "^0.11.1",
+    "octokit": "^5.0.3"
   }
 }
