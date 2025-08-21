@@ -4,6 +4,7 @@ import { generateText } from "ai";
 import { verifyGHWebhook, type GitHubWebhook } from "../../utils/github";
 import { Octokit } from "octokit";
 import { loadConfig } from "../../utils/config";
+import { getSchemaFromGithub, getSchemaFromUrl } from "../../utils/openAPI";
 import {
   fetchPostmanCollection,
   fetchPostmanSpecs,
@@ -11,20 +12,20 @@ import {
 } from "../../utils/postman";
 
 const octokit = new Octokit({ auth: process.env.GITHUB_PAT });
-const config = await loadConfig();
 
 export default async function Agent(
   req: AgentRequest,
   resp: AgentResponse,
   ctx: AgentContext
 ) {
+  const config = await loadConfig();
   let payload = (await req.data.json()) as GitHubWebhook;
   let rawBody = await req.data.binary();
 
   // First we check if the webhook actually came from GitHub.
   if (!verifyGHWebhook(req.metadata.headers, rawBody)) {
     ctx.logger.info("Webhook not from GitHub - ignoring.");
-    return resp.text("Webhook not from GitHub - ignoring.");
+    throw new Error("Webhook not from GitHub - ignoring.");
   }
 
   ctx.logger.info("Came from github.");
@@ -37,7 +38,7 @@ export default async function Agent(
 
   if (!isWatchedBranch) {
     ctx.logger.info("Not on watched branch - ignoring.");
-    return resp.text("Not on watched branch - ignoring.");
+    throw new Error("Not on watched branch - ignoring.");
   }
 
   // We want to get all the files that were changed, then ultimately get the changes from those files.
@@ -73,10 +74,17 @@ export default async function Agent(
       }
     }
 
+    let openapiSchema;
+    if (config["openapi-method"] == "raw-contents") {
+      openapiSchema = await getSchemaFromGithub(config);
+    } else {
+      openapiSchema = await getSchemaFromUrl(config);
+    }
+
     // If the changes did not affect any relevant files, ignore.
     if (relevantDiffs.length <= 0) {
       ctx.logger.info("No relevant changes - ignoring.");
-      return resp.text("No relevant changes - ignoring.");
+      throw new Error("No relevant changes - ignoring.");
     }
 
     // Now we get the current state of the postman collection.
@@ -94,10 +102,13 @@ export default async function Agent(
       ### 1. **Git commit diffs**
       ${JSON.stringify(relevantDiffs)}
 
-      ### 2. **Current Postman collection**
+      ### 2. **New OpenAPI Schema**
+      ${JSON.stringify(openapiSchema)}
+
+      ### 3. **Current Postman collection**
       ${JSON.stringify(collection)}
 
-      ### 3. **Postman Collection Format v2.1.0**
+      ### 4. **Postman Collection Format v2.1.0**
       ${JSON.stringify(specifications)}
       `,
     });
@@ -121,16 +132,7 @@ export default async function Agent(
     });
     ctx.logger.info(`Final Collection: ${finalCollection.text}`);
 
-    // Update the Postman collection with the new schema
-    // Clean the response text to remove markdown code blocks if present
-    let cleanedResponse = finalCollection.text.trim();
-    if (cleanedResponse.startsWith('```json')) {
-      cleanedResponse = cleanedResponse.replace(/^```json\n?/, '').replace(/\n?```$/, '');
-    } else if (cleanedResponse.startsWith('```')) {
-      cleanedResponse = cleanedResponse.replace(/^```\n?/, '').replace(/\n?```$/, '');
-    }
-    
-    const updatedCollection = JSON.parse(cleanedResponse);
+    const updatedCollection = JSON.parse(finalCollection.text);
 
     try {
       await updatePostmanCollection(updatedCollection);
@@ -140,7 +142,7 @@ export default async function Agent(
       );
     } catch (error) {
       ctx.logger.error(`Failed to update collection: ${error}`);
-      return resp.text(`Failed to update collection: ${error}`);
+      throw new Error(`Failed to update collection: ${error}`);
     }
   }
 
@@ -156,11 +158,12 @@ Your job is to analyze git commit diffs to determine whether the Agentuity API h
 ## Inputs Provided
 You will receive:
 1. **Git commit diffs** - The code changes to analyze
-2. **Current Postman collection** - The existing collection structure
-3. **Postman Collection Format v2.1.0** - https://schema.getpostman.com/json/collection/v2.1.0/collection.json
+2. **New OpenAPI Schema** - The new schema that is a result of the commit diffs.
+3. **Current Postman collection** - The existing collection structure
+4. **Postman Collection Format v2.1.0** - https://schema.getpostman.com/json/collection/v2.1.0/collection.json
 
 ## Task
-1. **Analyze the provided git commit diff**
+1. **Analyze the provided git commit diff and OpenAPI schema**
 2. **Identify API changes** including:
   - New endpoints
   - Modified endpoints (path, method, parameters)
@@ -189,4 +192,5 @@ Take the change instructions from the first agent and the current collection, th
 
 ## Output Format
 Return the FULL valid JSON object following Postman Collection Format v2.1.0 structure with the changes applied. No explanations or additional text.
+CRITICAL: Return raw JSON only. Do NOT wrap in markdown code blocks (\`\`\`json). Do NOT include any text before or after the JSON. Your response must parse directly with JSON.parse() in TypeScript.
 `;

@@ -18,7 +18,7 @@ owner: NobbyBop
 #   2. live-url
 #      - If your API is live, and OpenAPI schema can be accessed via /openapi endpoint
 #      - URL requires a url
-openapi-method: live-url
+openapi-method: raw-contents
 path: openapi.json
 url: http://localhost:3000/openapi
 
@@ -32,3 +32,6 @@ scope:
 branches:
   - main
   - master
+
+# collection-id: The postman collection id. Run the backfill agent to autopopulate this field
+collection-id: 3ee455d3-22f3-4f9e-8d17-68eb0a2b1989

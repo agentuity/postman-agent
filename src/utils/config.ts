@@ -1,6 +1,6 @@
 import yaml from "js-yaml";
 import fs from "fs/promises";
-import { config } from "process";
+
 // Load config
 export async function loadConfig() {
   try {

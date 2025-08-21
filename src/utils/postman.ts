@@ -89,3 +89,37 @@ export async function createPostmanCollection(newCollection: any) {
 
   return response;
 }
+
+/**
+ * Import OpenAPI schema to create a new Postman collection
+ */
+export async function importFromOpenAPI(openapiSchema: any) {
+  const response = await fetch(
+    `https://api.getpostman.com/import/openapi?workspace=${process.env.POSTMAN_WORKSPACE_ID}`,
+    {
+      method: "POST",
+      headers: {
+        "x-api-key": process.env.POSTMAN_API_KEY!,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        type: "json",
+        input: openapiSchema,
+        options: {
+          folderStrategy: "Tags",
+          requestParametersResolution: "Example",
+          optimizeConversion: false,
+        },
+      }),
+    }
+  );
+
+  if (!response.ok) {
+    const errorText = await response.text();
+    throw new Error(
+      `Failed to import OpenAPI to Postman collection: ${response.status} - ${errorText}`
+    );
+  }
+
+  return response;
+}
