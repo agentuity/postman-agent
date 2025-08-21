@@ -9,13 +9,10 @@ export function verifyGHWebhook(headers: any, payload: any): boolean {
         .digest("hex"),
     "utf8"
   );
-  console.log(`Secret Hash: ${secretHash}, My Hash: ${myHash}`);
+  // console.log(`Secret Hash: ${secretHash}, My Hash: ${myHash}`);
   return timingSafeEqual(secretHash, myHash);
 }
 
-export async function getDiffs() {
-  
-}
 export type GitHubWebhook = {
   ref: string;
   commits: Array<{
@@ -37,11 +34,10 @@ export type GitHubWebhook = {
     removed: string[];
     modified: string[];
   }>;
-  repository:{
-    name:string,
+  repository: {
+    name: string;
     owner: {
       name: string;
-    }
+    };
   };
-  
 };

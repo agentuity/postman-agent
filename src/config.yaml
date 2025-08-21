@@ -1,0 +1,34 @@
+# Postman Agent Config
+# - This configuration file is used by the agent to access the correct information in GitHub
+# - It also allows for quick customization and supports more flexibility.
+
+# repo: The name of the repo you want to work with.
+# - Only needed for backfill - repo comes from webhook to Postman Agent
+repo: dog-api
+
+# owner: The owner of the repo.
+# - Only needed for backfill - owner comes from webhook to Postman Agent.
+owner: NobbyBop
+
+# openapi-method: The method the agent will use to get your OpenAPI schema.
+# If one method fails, it will try the other.
+#   1. raw-contents
+#      - If your repo has an OpenAPI schema file in it
+#      - Path requires path to the file in the repo.
+#   2. live-url
+#      - If your API is live, and OpenAPI schema can be accessed via /openapi endpoint
+#      - URL requires a url
+openapi-method: live-url
+path: openapi.json
+url: http://localhost:3000/openapi
+
+# scope: The folders/files in your repo to watch for changes in.
+#   - Provide full paths
+#   - Leave empty to watch the whole repo
+scope:
+  - src/
+
+# branches: The branches in your repo to watch for changes in.
+branches:
+  - main
+  - master
