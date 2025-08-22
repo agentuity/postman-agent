@@ -3,9 +3,9 @@
 /**
  * Fetch the current Postman collection
  */
-export async function fetchPostmanCollection() {
+export async function fetchPostmanCollection(collectionId: string) {
   const response = await fetch(
-    `https://api.getpostman.com/collections/${process.env.POSTMAN_COLLECTION_ID}`,
+    `https://api.getpostman.com/collections/${collectionId}`,
     {
       method: "GET",
       headers: {
@@ -39,9 +39,12 @@ export async function fetchPostmanSpecs() {
 /**
  * Update the Postman collection with new data
  */
-export async function updatePostmanCollection(updatedCollection: any) {
+export async function updatePostmanCollection(
+  updatedCollection: any,
+  collectionId: string
+) {
   const response = await fetch(
-    `https://api.getpostman.com/collections/${process.env.POSTMAN_COLLECTION_ID}`,
+    `https://api.getpostman.com/collections/${collectionId}`,
     {
       method: "PUT",
       headers: {
