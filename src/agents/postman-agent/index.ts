@@ -9,7 +9,10 @@ import {
   fetchPostmanCollection,
   fetchPostmanSpecs,
   updatePostmanCollection,
+  crawlCollection,
 } from "../../utils/postman";
+import { writeFileSync } from "fs";
+import { isContext } from "vm";
 
 const octokit = new Octokit({ auth: process.env.GITHUB_PAT });
 
@@ -34,7 +37,7 @@ export default async function Agent(
       throw new Error("Webhook not from GitHub - ignoring.");
     }
 
-    ctx.logger.info("Came from github.");
+    // ctx.logger.info("Came from github.");
 
     // Check if the push is to a branch we're watching
     const isWatchedBranch =
@@ -52,7 +55,7 @@ export default async function Agent(
     // We want to get all the files that were changed, then ultimately get the changes from those files.
     let relevantDiffs = [];
     for (let commit of payload?.commits) {
-      ctx.logger.info("commit:", commit);
+      // ctx.logger.info("commit:", commit);
       let diffResponse = await octokit.request(
         "GET /repos/{owner}/{repo}/commits/{commit_sha}",
         {
@@ -61,7 +64,6 @@ export default async function Agent(
           commit_sha: commit.id,
         }
       );
-      console.log("diffResponse:", diffResponse);
       let files = diffResponse.data.files;
 
       // For each file in the commit, check if it is in scope
@@ -97,7 +99,15 @@ export default async function Agent(
     }
 
     // Now we get the current state of the postman collection.
-    let collection = await fetchPostmanCollection(config["collection-id"]);
+    let collectionResponse = await fetchPostmanCollection(
+      config["collection-id"]
+    );
+    let collection = await collectionResponse.json();
+    let crawledCollection = crawlCollection(collection);
+    ctx.logger.info("Crawled Collection:", crawledCollection);
+
+    // Write collection to file
+    writeFileSync("collection.json", JSON.stringify(collection, null, 2));
 
     // Also, may remove this, but get the specifications of a collection object.
     let specifications = await fetchPostmanSpecs();
@@ -121,33 +131,13 @@ export default async function Agent(
         ${JSON.stringify(specifications)}
         `,
     });
-    ctx.logger.info(`Change instructions: ${response.text}`);
-    // Now, we make a second call to implement the proposed changes.
-    let finalCollection = await generateText({
-      model: openai("chatgpt-4o-latest"),
-      system: applyChangesPrompt,
-      prompt: `
-        ## Inputs
-        ### 1. **Change instructions**
-        ${JSON.stringify(response.text)}
-
-        ### 2. **Current Postman collection**
-        ${JSON.stringify(collection)}
-
-        ### 3. **Postman Collection Format v2.1.0**
-        ${JSON.stringify(specifications)}
-        `,
-    });
-    ctx.logger.info(`Final Collection: ${finalCollection.text}`);
-
-    const updatedCollection = JSON.parse(finalCollection.text);
-
-    try {
-      await updatePostmanCollection(updatedCollection, config["collection-id"]);
-      ctx.logger.info("Successfully updated Postman collection");
-    } catch (error) {
-      ctx.logger.error(`Failed to update collection: ${error}`);
-    }
+    ctx.logger.info("Response from Agent:", response.text);
+    // try {
+    //   await updatePostmanCollection(updatedCollection, config["collection-id"]);
+    //   ctx.logger.info("Successfully updated Postman collection");
+    // } catch (error) {
+    //   ctx.logger.error(`Failed to update collection: ${error}`);
+    // }
   })();
 
   return resp.text("Successfully kicked off process");
@@ -179,36 +169,3 @@ You will receive:
 
 ## Output Format
 Return only the numbered list of changes to make in the Postman Collection JSON object.`;
-
-const applyChangesPrompt = `
-# Collection Update Agent
-
-## Inputs Provided
-You will receive:
-1. **Change instructions** - Specific modifications to apply
-2. **Current Postman collection** - The existing collection structure that must be preserved
-3. **Postman Collection Format v2.1.0** - https://schema.getpostman.com/json/collection/v2.1.0/collection.json
-
-## Task
-Apply the specified changes to the existing Postman collection while preserving all current content and structure. Only modify what is explicitly requested in the change instructions.
-
-## Important Guidelines
-- **PRESERVE EXISTING CONTENT**: Do not remove or replace any existing requests, folders, variables, or configurations unless explicitly instructed
-- **ADDITIVE CHANGES**: When adding new elements, integrate them into the existing structure
-- **TARGETED MODIFICATIONS**: Only modify specific elements mentioned in the change instructions
-- **MAINTAIN STRUCTURE**: Keep the original collection hierarchy and organization intact
-- **VALIDATE FORMAT**: Ensure the output follows Postman Collection Format v2.1.0
-
-## Output Format
-Return the **COMPLETE** updated Postman collection as a valid JSON object following Postman Collection Format v2.1.0 structure. The response must include:
-- All original collection content (unchanged elements)
-- Applied changes from the instructions
-- Valid JSON structure that can be imported into Postman
-
-**CRITICAL REQUIREMENTS:**
-- Return raw JSON only
-- Do NOT wrap in markdown code blocks (\`\`\`json)
-- Do NOT include any explanatory text before or after the JSON
-- Your response must parse directly with JSON.parse() in TypeScript
-- The JSON must be a complete, valid Postman collection
-`;

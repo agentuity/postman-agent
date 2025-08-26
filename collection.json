@@ -1,0 +1,3457 @@
+{
+  "collection": {
+    "info": {
+      "_postman_id": "8a505ffd-e417-495b-b2c6-021788c3b687",
+      "name": "Dog API",
+      "description": "A comprehensive API for managing dogs, breeds, adoption, health records, and training data",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+      "updatedAt": "2025-08-26T17:22:02.000Z",
+      "createdAt": "2025-08-22T20:07:43.000Z",
+      "lastUpdatedBy": "33439397",
+      "uid": "33439397-8a505ffd-e417-495b-b2c6-021788c3b687"
+    },
+    "item": [
+      {
+        "name": "Dogs",
+        "item": [
+          {
+            "name": "List all dogs",
+            "id": "20bf4d12-19fc-4680-aa7d-d4421f70a287",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "GET",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                }
+              ],
+              "url": {
+                "raw": "{{baseUrl}}/dogs?breed=in minim cillum ea ex&age_min=54991589&age_max=54991589&weight_min=8794220.455833578&weight_max=8794220.455833578&gender=female&size=large&isNeutered=true&page=1&limit=10",
+                "host": [
+                  "{{baseUrl}}"
+                ],
+                "path": [
+                  "dogs"
+                ],
+                "query": [
+                  {
+                    "key": "breed",
+                    "value": "in minim cillum ea ex"
+                  },
+                  {
+                    "key": "age_min",
+                    "value": "54991589"
+                  },
+                  {
+                    "key": "age_max",
+                    "value": "54991589"
+                  },
+                  {
+                    "key": "weight_min",
+                    "value": "8794220.455833578"
+                  },
+                  {
+                    "key": "weight_max",
+                    "value": "8794220.455833578"
+                  },
+                  {
+                    "key": "gender",
+                    "value": "female"
+                  },
+                  {
+                    "key": "size",
+                    "value": "large"
+                  },
+                  {
+                    "key": "isNeutered",
+                    "value": "true"
+                  },
+                  {
+                    "key": "page",
+                    "value": "1"
+                  },
+                  {
+                    "key": "limit",
+                    "value": "10"
+                  }
+                ]
+              },
+              "description": "Retrieve a paginated list of dogs with optional filtering"
+            },
+            "response": [
+              {
+                "id": "e31cfc76-3597-4979-9142-45173a2e2f28",
+                "name": "List of dogs with pagination",
+                "originalRequest": {
+                  "method": "GET",
+                  "header": [
+                    {
+                      "key": "Accept",
+                      "value": "application/json"
+                    }
+                  ],
+                  "url": {
+                    "raw": "{{baseUrl}}/dogs?breed=in minim cillum ea ex&age_min=54991589&age_max=54991589&weight_min=8794220.455833578&weight_max=8794220.455833578&gender=female&size=large&isNeutered=true&page=1&limit=10",
+                    "host": [
+                      "{{baseUrl}}"
+                    ],
+                    "path": [
+                      "dogs"
+                    ],
+                    "query": [
+                      {
+                        "key": "breed",
+                        "value": "in minim cillum ea ex"
+                      },
+                      {
+                        "key": "age_min",
+                        "value": "54991589"
+                      },
+                      {
+                        "key": "age_max",
+                        "value": "54991589"
+                      },
+                      {
+                        "key": "weight_min",
+                        "value": "8794220.455833578"
+                      },
+                      {
+                        "key": "weight_max",
+                        "value": "8794220.455833578"
+                      },
+                      {
+                        "key": "gender",
+                        "value": "female"
+                      },
+                      {
+                        "key": "size",
+                        "value": "large"
+                      },
+                      {
+                        "key": "isNeutered",
+                        "value": "true"
+                      },
+                      {
+                        "key": "page",
+                        "value": "1"
+                      },
+                      {
+                        "key": "limit",
+                        "value": "10"
+                      }
+                    ]
+                  }
+                },
+                "status": "OK",
+                "code": 200,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "{\n  \"data\": [\n    {\n      \"id\": \"ad45cc30-1eb4-6845-8c8e-90207d8c8728\",\n      \"name\": \"Lorem elit labore deserun\",\n      \"breed\": \"enim ut\",\n      \"age\": 11,\n      \"weight\": 140.5158114178073,\n      \"gender\": \"male\",\n      \"color\": \"nostrud incididunt rep\",\n      \"size\": \"small\",\n      \"temperament\": [\n        \"est\",\n        \"pariatu\"\n      ],\n      \"isNeutered\": false,\n      \"photos\": [\n        \"https://QOsKTPpRXcqbLgVAyMlXiWoGv.xoiUenrHlFCyi0xAKAxcOIWKD+1FnmfexBbmyNMmoBSE4u5YFMR\",\n        \"http://YzgEEvKSgujLAOclJqoQf.hbqvFnk4O81Pgg0piBGrW6kSUzDXscvnVOiANE.JldJPpaIIZPB6cwP+hAZuplw+H9m3D3w\"\n      ],\n      \"description\": \"aliquip sit\",\n      \"createdAt\": \"1998-08-24T14:59:13.764Z\",\n      \"updatedAt\": \"1952-12-21T23:59:04.751Z\",\n      \"microchipId\": \"ullamco\"\n    },\n    {\n      \"id\": \"6090b87e-2ce8-0293-02b7-3839f889f80f\",\n      \"name\": \"sint ea\",\n      \"breed\": \"aliquip exercitation non\",\n      \"age\": 25,\n      \"weight\": 135.42036472341738,\n      \"gender\": \"female\",\n      \"color\": \"Ut ut\",\n      \"size\": \"medium\",\n      \"temperament\": [\n        \"nulla sed\",\n        \"et esse eiusmod\"\n      ],\n      \"isNeutered\": false,\n      \"photos\": [\n        \"http://BPQQOqK.opnbybDk+oDsquVwaUgH6TUju4pIH-WnAiE5e25YWREpYOdqySII0Qjjg2-Fx3k\",\n        \"https://tBYUvmaxjCoTHJuXFUeoEpqvOhtUWn.isdfLGkPADUSkXaHracnESRtmZMruT\"\n      ],\n      \"description\": \"est pariatur culp\",\n      \"createdAt\": \"1955-10-21T13:41:05.574Z\",\n      \"updatedAt\": \"1948-09-19T03:26:43.735Z\",\n      \"microchipId\": \"in sit nisi labore\"\n    }\n  ],\n  \"pagination\": {\n    \"total\": 14542625,\n    \"totalPages\": 68945538,\n    \"page\": 1,\n    \"limit\": 10\n  }\n}",
+                "uid": "33439397-e31cfc76-3597-4979-9142-45173a2e2f28"
+              }
+            ],
+            "uid": "33439397-20bf4d12-19fc-4680-aa7d-d4421f70a287"
+          },
+          {
+            "name": "Create a new dog",
+            "id": "a1d3de72-4c59-4237-b367-c79b49b211ab",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "POST",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n  \"name\": \"dolore sit \",\n  \"breed\": \"dolore\",\n  \"age\": 16,\n  \"weight\": 89.62859172167595,\n  \"gender\": \"male\",\n  \"color\": \"non ut dolor est\",\n  \"size\": \"extra-large\",\n  \"temperament\": [\n    \"enim nulla mollit voluptate\",\n    \"est dolor adipisicing esse \"\n  ],\n  \"isNeutered\": false,\n  \"photos\": [\n    \"http://nehtbmNcpwHIlApo.rnwBrdEHTGWWeh8O.+R6b6Kzg+PU\",\n    \"http://FeDnlujxfL.hdgopW1ShFxbUsbj4Ue,ddSHqPQIdd09TUCTrq6gGl5PAj3J8E+8H\"\n  ],\n  \"description\": \"nulla id\",\n  \"microchipId\": \"aute in non\"\n}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              },
+              "url": {
+                "raw": "{{baseUrl}}/dogs",
+                "host": [
+                  "{{baseUrl}}"
+                ],
+                "path": [
+                  "dogs"
+                ]
+              },
+              "description": "Add a new dog to the database"
+            },
+            "response": [
+              {
+                "id": "d3bbadb6-b208-436f-8553-04a486682a59",
+                "name": "Dog created successfully",
+                "originalRequest": {
+                  "method": "POST",
+                  "header": [
+                    {
+                      "key": "Accept",
+                      "value": "application/json"
+                    }
+                  ],
+                  "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"name\": \"dolore sit \",\n  \"breed\": \"dolore\",\n  \"age\": 16,\n  \"weight\": 89.62859172167595,\n  \"gender\": \"male\",\n  \"color\": \"non ut dolor est\",\n  \"size\": \"extra-large\",\n  \"temperament\": [\n    \"enim nulla mollit voluptate\",\n    \"est dolor adipisicing esse \"\n  ],\n  \"isNeutered\": false,\n  \"photos\": [\n    \"http://nehtbmNcpwHIlApo.rnwBrdEHTGWWeh8O.+R6b6Kzg+PU\",\n    \"http://FeDnlujxfL.hdgopW1ShFxbUsbj4Ue,ddSHqPQIdd09TUCTrq6gGl5PAj3J8E+8H\"\n  ],\n  \"description\": \"nulla id\",\n  \"microchipId\": \"aute in non\"\n}",
+                    "options": {
+                      "raw": {
+                        "language": "json"
+                      }
+                    }
+                  },
+                  "url": {
+                    "raw": "{{baseUrl}}/dogs",
+                    "host": [
+                      "{{baseUrl}}"
+                    ],
+                    "path": [
+                      "dogs"
+                    ]
+                  }
+                },
+                "status": "Created",
+                "code": 201,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "{\n  \"id\": \"urn:uuid:dada92d0-2241-21fd-f150-8b80044d17fd\",\n  \"name\": \"nostrud voluptate eu\",\n  \"breed\": \"ea irure nostrud est\",\n  \"age\": 2,\n  \"weight\": 135.45555401473575,\n  \"gender\": \"male\",\n  \"color\": \"cillum\",\n  \"size\": \"small\",\n  \"temperament\": [\n    \"sit tempor voluptate\",\n    \"qui nisi laboris Ut commodo\"\n  ],\n  \"isNeutered\": false,\n  \"photos\": [\n    \"http://iyVmTXomaX.ikwCFOBD7K.eM5\",\n    \"https://YlcpBGLEwuZeWaU.zwtYWIW0PmiCCpJ1WxJlppaesuX19HdApi1lGdSG,q2fK6omYJXrlZGx8IP1wzum7sr9tAIm6s\"\n  ],\n  \"description\": \"cillum\",\n  \"createdAt\": \"1955-08-12T14:38:35.420Z\",\n  \"updatedAt\": \"2012-12-05T14:34:12.150Z\",\n  \"microchipId\": \"amet id\"\n}",
+                "uid": "33439397-d3bbadb6-b208-436f-8553-04a486682a59"
+              },
+              {
+                "id": "3bb0d649-fa98-44c0-90c4-286803c4ff0a",
+                "name": "Invalid input data",
+                "originalRequest": {
+                  "method": "POST",
+                  "header": [
+                    {
+                      "key": "Accept",
+                      "value": "application/json"
+                    }
+                  ],
+                  "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"name\": \"dolore sit \",\n  \"breed\": \"dolore\",\n  \"age\": 16,\n  \"weight\": 89.62859172167595,\n  \"gender\": \"male\",\n  \"color\": \"non ut dolor est\",\n  \"size\": \"extra-large\",\n  \"temperament\": [\n    \"enim nulla mollit voluptate\",\n    \"est dolor adipisicing esse \"\n  ],\n  \"isNeutered\": false,\n  \"photos\": [\n    \"http://nehtbmNcpwHIlApo.rnwBrdEHTGWWeh8O.+R6b6Kzg+PU\",\n    \"http://FeDnlujxfL.hdgopW1ShFxbUsbj4Ue,ddSHqPQIdd09TUCTrq6gGl5PAj3J8E+8H\"\n  ],\n  \"description\": \"nulla id\",\n  \"microchipId\": \"aute in non\"\n}",
+                    "options": {
+                      "raw": {
+                        "language": "json"
+                      }
+                    }
+                  },
+                  "url": {
+                    "raw": "{{baseUrl}}/dogs",
+                    "host": [
+                      "{{baseUrl}}"
+                    ],
+                    "path": [
+                      "dogs"
+                    ]
+                  }
+                },
+                "status": "Bad Request",
+                "code": 400,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "{\n  \"error\": \"labore\",\n  \"message\": \"occae\",\n  \"details\": {}\n}",
+                "uid": "33439397-3bb0d649-fa98-44c0-90c4-286803c4ff0a"
+              }
+            ],
+            "uid": "33439397-a1d3de72-4c59-4237-b367-c79b49b211ab"
+          },
+          {
+            "name": "Get dog by ID",
+            "id": "1bb2a1bb-3c63-4fac-abdb-7223231be332",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "GET",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                }
+              ],
+              "url": {
+                "raw": "{{baseUrl}}/dogs/:id",
+                "host": [
+                  "{{baseUrl}}"
+                ],
+                "path": [
+                  "dogs",
+                  ":id"
+                ],
+                "variable": [
+                  {
+                    "id": "d87e6471-0eac-4987-869f-e55f52c3d6a0",
+                    "key": "id",
+                    "value": "urn:uuid:a066e792-11a6-c020-59e3-13c78d97415f",
+                    "description": "(Required) "
+                  }
+                ]
+              },
+              "description": "Retrieve a specific dog by its ID"
+            },
+            "response": [
+              {
+                "id": "559af885-fbb7-4dd4-9b70-315f28afad18",
+                "name": "Dog details",
+                "originalRequest": {
+                  "method": "GET",
+                  "header": [
+                    {
+                      "key": "Accept",
+                      "value": "application/json"
+                    }
+                  ],
+                  "url": {
+                    "raw": "{{baseUrl}}/dogs/:id",
+                    "host": [
+                      "{{baseUrl}}"
+                    ],
+                    "path": [
+                      "dogs",
+                      ":id"
+                    ],
+                    "variable": [
+                      {
+                        "key": "id",
+                        "value": "urn:uuid:a066e792-11a6-c020-59e3-13c78d97415f",
+                        "description": "(Required) "
+                      }
+                    ]
+                  }
+                },
+                "status": "OK",
+                "code": 200,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "{\n  \"id\": \"urn:uuid:dada92d0-2241-21fd-f150-8b80044d17fd\",\n  \"name\": \"nostrud voluptate eu\",\n  \"breed\": \"ea irure nostrud est\",\n  \"age\": 2,\n  \"weight\": 135.45555401473575,\n  \"gender\": \"male\",\n  \"color\": \"cillum\",\n  \"size\": \"small\",\n  \"temperament\": [\n    \"sit tempor voluptate\",\n    \"qui nisi laboris Ut commodo\"\n  ],\n  \"isNeutered\": false,\n  \"photos\": [\n    \"http://iyVmTXomaX.ikwCFOBD7K.eM5\",\n    \"https://YlcpBGLEwuZeWaU.zwtYWIW0PmiCCpJ1WxJlppaesuX19HdApi1lGdSG,q2fK6omYJXrlZGx8IP1wzum7sr9tAIm6s\"\n  ],\n  \"description\": \"cillum\",\n  \"createdAt\": \"1955-08-12T14:38:35.420Z\",\n  \"updatedAt\": \"2012-12-05T14:34:12.150Z\",\n  \"microchipId\": \"amet id\"\n}",
+                "uid": "33439397-559af885-fbb7-4dd4-9b70-315f28afad18"
+              },
+              {
+                "id": "b9341b3e-1d25-4d07-9fb0-29f1584d2b70",
+                "name": "Dog not found",
+                "originalRequest": {
+                  "method": "GET",
+                  "header": [
+                    {
+                      "key": "Accept",
+                      "value": "application/json"
+                    }
+                  ],
+                  "url": {
+                    "raw": "{{baseUrl}}/dogs/:id",
+                    "host": [
+                      "{{baseUrl}}"
+                    ],
+                    "path": [
+                      "dogs",
+                      ":id"
+                    ],
+                    "variable": [
+                      {
+                        "key": "id",
+                        "value": "urn:uuid:a066e792-11a6-c020-59e3-13c78d97415f",
+                        "description": "(Required) "
+                      }
+                    ]
+                  }
+                },
+                "status": "Not Found",
+                "code": 404,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "{\n  \"error\": \"labore\",\n  \"message\": \"occae\",\n  \"details\": {}\n}",
+                "uid": "33439397-b9341b3e-1d25-4d07-9fb0-29f1584d2b70"
+              }
+            ],
+            "uid": "33439397-1bb2a1bb-3c63-4fac-abdb-7223231be332"
+          },
+          {
+            "name": "Update dog",
+            "id": "c6c7a19a-1245-43b4-a581-a864a94b6561",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "PUT",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n  \"name\": \"eu Excepteur\",\n  \"breed\": \"esse eu elit enim\",\n  \"age\": 22,\n  \"weight\": 5.199679175319804,\n  \"gender\": \"female\",\n  \"color\": \"ut Lor\",\n  \"size\": \"small\",\n  \"temperament\": [\n    \"enim tempo\",\n    \"magna fugiat ullamco laboris\"\n  ],\n  \"isNeutered\": false,\n  \"microchipId\": \"veniam nostrud culpa\",\n  \"photos\": [\n    \"http://ITadnvLl.gykqxZh9HkKHEFM7u5MEXqOhulTSxiXAuSSU5IfjOCZCqHb.wqav2EiM.Me8\",\n    \"https://TBQPncxAflBPjIbfoj.ujnvDu8yyGUDfAauhovGp21Kk.6+w9HuwWGCtXY8pVk-m+RjTCia\"\n  ],\n  \"description\": \"nulla exercitation dolor\"\n}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              },
+              "url": {
+                "raw": "{{baseUrl}}/dogs/:id",
+                "host": [
+                  "{{baseUrl}}"
+                ],
+                "path": [
+                  "dogs",
+                  ":id"
+                ],
+                "variable": [
+                  {
+                    "id": "531ecd10-1f02-46cf-8f7b-87770ce903d8",
+                    "key": "id",
+                    "value": "urn:uuid:a066e792-11a6-c020-59e3-13c78d97415f",
+                    "description": "(Required) "
+                  }
+                ]
+              },
+              "description": "Update an existing dog's information"
+            },
+            "response": [
+              {
+                "id": "bbe17a1c-7bfa-47b6-92e5-f6b972b382c4",
+                "name": "Dog updated successfully",
+                "originalRequest": {
+                  "method": "PUT",
+                  "header": [
+                    {
+                      "key": "Accept",
+                      "value": "application/json"
+                    }
+                  ],
+                  "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"name\": \"eu Excepteur\",\n  \"breed\": \"esse eu elit enim\",\n  \"age\": 22,\n  \"weight\": 5.199679175319804,\n  \"gender\": \"female\",\n  \"color\": \"ut Lor\",\n  \"size\": \"small\",\n  \"temperament\": [\n    \"enim tempo\",\n    \"magna fugiat ullamco laboris\"\n  ],\n  \"isNeutered\": false,\n  \"microchipId\": \"veniam nostrud culpa\",\n  \"photos\": [\n    \"http://ITadnvLl.gykqxZh9HkKHEFM7u5MEXqOhulTSxiXAuSSU5IfjOCZCqHb.wqav2EiM.Me8\",\n    \"https://TBQPncxAflBPjIbfoj.ujnvDu8yyGUDfAauhovGp21Kk.6+w9HuwWGCtXY8pVk-m+RjTCia\"\n  ],\n  \"description\": \"nulla exercitation dolor\"\n}",
+                    "options": {
+                      "raw": {
+                        "language": "json"
+                      }
+                    }
+                  },
+                  "url": {
+                    "raw": "{{baseUrl}}/dogs/:id",
+                    "host": [
+                      "{{baseUrl}}"
+                    ],
+                    "path": [
+                      "dogs",
+                      ":id"
+                    ],
+                    "variable": [
+                      {
+                        "key": "id",
+                        "value": "urn:uuid:a066e792-11a6-c020-59e3-13c78d97415f",
+                        "description": "(Required) "
+                      }
+                    ]
+                  }
+                },
+                "status": "OK",
+                "code": 200,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "{\n  \"id\": \"urn:uuid:dada92d0-2241-21fd-f150-8b80044d17fd\",\n  \"name\": \"nostrud voluptate eu\",\n  \"breed\": \"ea irure nostrud est\",\n  \"age\": 2,\n  \"weight\": 135.45555401473575,\n  \"gender\": \"male\",\n  \"color\": \"cillum\",\n  \"size\": \"small\",\n  \"temperament\": [\n    \"sit tempor voluptate\",\n    \"qui nisi laboris Ut commodo\"\n  ],\n  \"isNeutered\": false,\n  \"photos\": [\n    \"http://iyVmTXomaX.ikwCFOBD7K.eM5\",\n    \"https://YlcpBGLEwuZeWaU.zwtYWIW0PmiCCpJ1WxJlppaesuX19HdApi1lGdSG,q2fK6omYJXrlZGx8IP1wzum7sr9tAIm6s\"\n  ],\n  \"description\": \"cillum\",\n  \"createdAt\": \"1955-08-12T14:38:35.420Z\",\n  \"updatedAt\": \"2012-12-05T14:34:12.150Z\",\n  \"microchipId\": \"amet id\"\n}",
+                "uid": "33439397-bbe17a1c-7bfa-47b6-92e5-f6b972b382c4"
+              },
+              {
+                "id": "b96eddcb-c608-409a-b531-64039b198d81",
+                "name": "Dog not found",
+                "originalRequest": {
+                  "method": "PUT",
+                  "header": [
+                    {
+                      "key": "Accept",
+                      "value": "application/json"
+                    }
+                  ],
+                  "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"name\": \"eu Excepteur\",\n  \"breed\": \"esse eu elit enim\",\n  \"age\": 22,\n  \"weight\": 5.199679175319804,\n  \"gender\": \"female\",\n  \"color\": \"ut Lor\",\n  \"size\": \"small\",\n  \"temperament\": [\n    \"enim tempo\",\n    \"magna fugiat ullamco laboris\"\n  ],\n  \"isNeutered\": false,\n  \"microchipId\": \"veniam nostrud culpa\",\n  \"photos\": [\n    \"http://ITadnvLl.gykqxZh9HkKHEFM7u5MEXqOhulTSxiXAuSSU5IfjOCZCqHb.wqav2EiM.Me8\",\n    \"https://TBQPncxAflBPjIbfoj.ujnvDu8yyGUDfAauhovGp21Kk.6+w9HuwWGCtXY8pVk-m+RjTCia\"\n  ],\n  \"description\": \"nulla exercitation dolor\"\n}",
+                    "options": {
+                      "raw": {
+                        "language": "json"
+                      }
+                    }
+                  },
+                  "url": {
+                    "raw": "{{baseUrl}}/dogs/:id",
+                    "host": [
+                      "{{baseUrl}}"
+                    ],
+                    "path": [
+                      "dogs",
+                      ":id"
+                    ],
+                    "variable": [
+                      {
+                        "key": "id",
+                        "value": "urn:uuid:a066e792-11a6-c020-59e3-13c78d97415f",
+                        "description": "(Required) "
+                      }
+                    ]
+                  }
+                },
+                "status": "Not Found",
+                "code": 404,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "{\n  \"error\": \"labore\",\n  \"message\": \"occae\",\n  \"details\": {}\n}",
+                "uid": "33439397-b96eddcb-c608-409a-b531-64039b198d81"
+              }
+            ],
+            "uid": "33439397-c6c7a19a-1245-43b4-a581-a864a94b6561"
+          },
+          {
+            "name": "Delete dog",
+            "id": "ec98a32f-1e57-477c-849b-2f1e44529085",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "DELETE",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                }
+              ],
+              "url": {
+                "raw": "{{baseUrl}}/dogs/:id",
+                "host": [
+                  "{{baseUrl}}"
+                ],
+                "path": [
+                  "dogs",
+                  ":id"
+                ],
+                "variable": [
+                  {
+                    "id": "1430f3ed-0cf0-4e02-964f-a6bdf20b20e8",
+                    "key": "id",
+                    "value": "urn:uuid:a066e792-11a6-c020-59e3-13c78d97415f",
+                    "description": "(Required) "
+                  }
+                ]
+              },
+              "description": "Remove a dog from the database"
+            },
+            "response": [
+              {
+                "id": "84516487-bf23-48c3-ab3e-f99b26574b07",
+                "name": "Dog deleted successfully",
+                "originalRequest": {
+                  "method": "DELETE",
+                  "header": [],
+                  "url": {
+                    "raw": "{{baseUrl}}/dogs/:id",
+                    "host": [
+                      "{{baseUrl}}"
+                    ],
+                    "path": [
+                      "dogs",
+                      ":id"
+                    ],
+                    "variable": [
+                      {
+                        "key": "id",
+                        "value": "urn:uuid:a066e792-11a6-c020-59e3-13c78d97415f",
+                        "description": "(Required) "
+                      }
+                    ]
+                  }
+                },
+                "status": "No Content",
+                "code": 204,
+                "_postman_previewlanguage": "text",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "text/plain"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "",
+                "uid": "33439397-84516487-bf23-48c3-ab3e-f99b26574b07"
+              },
+              {
+                "id": "5f544bf1-a75c-4033-9985-c777b2922fa9",
+                "name": "Dog not found",
+                "originalRequest": {
+                  "method": "DELETE",
+                  "header": [
+                    {
+                      "key": "Accept",
+                      "value": "application/json"
+                    }
+                  ],
+                  "url": {
+                    "raw": "{{baseUrl}}/dogs/:id",
+                    "host": [
+                      "{{baseUrl}}"
+                    ],
+                    "path": [
+                      "dogs",
+                      ":id"
+                    ],
+                    "variable": [
+                      {
+                        "key": "id",
+                        "value": "urn:uuid:a066e792-11a6-c020-59e3-13c78d97415f",
+                        "description": "(Required) "
+                      }
+                    ]
+                  }
+                },
+                "status": "Not Found",
+                "code": 404,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "{\n  \"error\": \"labore\",\n  \"message\": \"occae\",\n  \"details\": {}\n}",
+                "uid": "33439397-5f544bf1-a75c-4033-9985-c777b2922fa9"
+              }
+            ],
+            "uid": "33439397-ec98a32f-1e57-477c-849b-2f1e44529085"
+          },
+          {
+            "name": "Get dog photos",
+            "id": "e92c4c41-0d92-41f5-a56e-dbb8c88b9a72",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "GET",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                }
+              ],
+              "url": {
+                "raw": "{{baseUrl}}/dogs/:id/photos",
+                "host": [
+                  "{{baseUrl}}"
+                ],
+                "path": [
+                  "dogs",
+                  ":id",
+                  "photos"
+                ],
+                "variable": [
+                  {
+                    "id": "88a3ed0c-35c4-4076-9823-57af3e992566",
+                    "key": "id",
+                    "value": "urn:uuid:a066e792-11a6-c020-59e3-13c78d97415f",
+                    "description": "(Required) "
+                  }
+                ]
+              },
+              "description": "Get all photos for a specific dog"
+            },
+            "response": [
+              {
+                "id": "79bf6b07-68f8-4700-8075-5512f86a53b6",
+                "name": "Dog photos",
+                "originalRequest": {
+                  "method": "GET",
+                  "header": [
+                    {
+                      "key": "Accept",
+                      "value": "application/json"
+                    }
+                  ],
+                  "url": {
+                    "raw": "{{baseUrl}}/dogs/:id/photos",
+                    "host": [
+                      "{{baseUrl}}"
+                    ],
+                    "path": [
+                      "dogs",
+                      ":id",
+                      "photos"
+                    ],
+                    "variable": [
+                      {
+                        "key": "id",
+                        "value": "urn:uuid:a066e792-11a6-c020-59e3-13c78d97415f",
+                        "description": "(Required) "
+                      }
+                    ]
+                  }
+                },
+                "status": "OK",
+                "code": 200,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "{\n  \"dogId\": \"urn:uuid:d7f50fff-45c0-7d1d-6dcc-e16503f82e73\",\n  \"photos\": [\n    \"https://QNqeijYfsk.frki7zZGv9eeD+CmqZd+cQj,BL4QNBd2AFJQfe.eqLM,dEaLP+1BtxFNnVKN1Loz3W\",\n    \"https://IOHm.ehfHhFQC1UOVdExlZpR5KgvzRwWUnE13BssyQdtVEhU1NcxI,S94T84XBQ6zhbqvnB-oV\"\n  ]\n}",
+                "uid": "33439397-79bf6b07-68f8-4700-8075-5512f86a53b6"
+              },
+              {
+                "id": "8d4e0af8-a00c-497c-b133-fe56e880783d",
+                "name": "Dog not found",
+                "originalRequest": {
+                  "method": "GET",
+                  "header": [
+                    {
+                      "key": "Accept",
+                      "value": "application/json"
+                    }
+                  ],
+                  "url": {
+                    "raw": "{{baseUrl}}/dogs/:id/photos",
+                    "host": [
+                      "{{baseUrl}}"
+                    ],
+                    "path": [
+                      "dogs",
+                      ":id",
+                      "photos"
+                    ],
+                    "variable": [
+                      {
+                        "key": "id",
+                        "value": "urn:uuid:a066e792-11a6-c020-59e3-13c78d97415f",
+                        "description": "(Required) "
+                      }
+                    ]
+                  }
+                },
+                "status": "Not Found",
+                "code": 404,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "{\n  \"error\": \"labore\",\n  \"message\": \"occae\",\n  \"details\": {}\n}",
+                "uid": "33439397-8d4e0af8-a00c-497c-b133-fe56e880783d"
+              }
+            ],
+            "uid": "33439397-e92c4c41-0d92-41f5-a56e-dbb8c88b9a72"
+          }
+        ],
+        "id": "e02a6fe3-c7aa-48a5-be0a-e7b79d1d689c",
+        "uid": "33439397-e02a6fe3-c7aa-48a5-be0a-e7b79d1d689c"
+      },
+      {
+        "name": "Breeds",
+        "item": [
+          {
+            "name": "List all dog breeds",
+            "id": "57776dd8-e87b-4d54-91d1-a11756252771",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "GET",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                }
+              ],
+              "url": {
+                "raw": "{{baseUrl}}/breeds?group=herding&size=large&exerciseNeeds=moderate&goodWithKids=true&goodWithPets=true",
+                "host": [
+                  "{{baseUrl}}"
+                ],
+                "path": [
+                  "breeds"
+                ],
+                "query": [
+                  {
+                    "key": "group",
+                    "value": "herding"
+                  },
+                  {
+                    "key": "size",
+                    "value": "large"
+                  },
+                  {
+                    "key": "exerciseNeeds",
+                    "value": "moderate"
+                  },
+                  {
+                    "key": "goodWithKids",
+                    "value": "true"
+                  },
+                  {
+                    "key": "goodWithPets",
+                    "value": "true"
+                  }
+                ]
+              },
+              "description": "Retrieve a list of all available dog breeds with their characteristics"
+            },
+            "response": [
+              {
+                "id": "085afaed-ecd7-4b4c-8ce8-7cf68920c79e",
+                "name": "List of dog breeds",
+                "originalRequest": {
+                  "method": "GET",
+                  "header": [
+                    {
+                      "key": "Accept",
+                      "value": "application/json"
+                    }
+                  ],
+                  "url": {
+                    "raw": "{{baseUrl}}/breeds?group=herding&size=large&exerciseNeeds=moderate&goodWithKids=true&goodWithPets=true",
+                    "host": [
+                      "{{baseUrl}}"
+                    ],
+                    "path": [
+                      "breeds"
+                    ],
+                    "query": [
+                      {
+                        "key": "group",
+                        "value": "herding"
+                      },
+                      {
+                        "key": "size",
+                        "value": "large"
+                      },
+                      {
+                        "key": "exerciseNeeds",
+                        "value": "moderate"
+                      },
+                      {
+                        "key": "goodWithKids",
+                        "value": "true"
+                      },
+                      {
+                        "key": "goodWithPets",
+                        "value": "true"
+                      }
+                    ]
+                  }
+                },
+                "status": "OK",
+                "code": 200,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "[\n  {\n    \"id\": \"urn:uuid:624badb8-ab36-ddd8-9375-9677818bbabd\",\n    \"name\": \"Duis est\",\n    \"group\": \"working\",\n    \"origin\": \"nisi dolor occaecat Lorem\",\n    \"size\": \"extra-large\",\n    \"lifeSpan\": {\n      \"min\": 9,\n      \"max\": 29\n    },\n    \"temperament\": [\n      \"esse\",\n      \"nisi officia cupidatat\"\n    ],\n    \"exerciseNeeds\": \"high\",\n    \"groomingNeeds\": \"moderate\",\n    \"trainability\": \"high\",\n    \"goodWithKids\": false,\n    \"goodWithPets\": true,\n    \"description\": \"nostrud occaecat Excepteur minim\",\n    \"createdAt\": \"2020-06-08T14:57:18.219Z\",\n    \"updatedAt\": \"2017-07-13T02:40:44.909Z\",\n    \"image\": \"https://aUrsizoYFmgVgNRkVo.attGY\"\n  },\n  {\n    \"id\": \"31bc30ce-dfff-c86c-41d3-f97dad258cf7\",\n    \"name\": \"ea exercitation nisi ulla\",\n    \"group\": \"non-sporting\",\n    \"origin\": \"minim dolor\",\n    \"size\": \"extra-large\",\n    \"lifeSpan\": {\n      \"min\": 14,\n      \"max\": 10\n    },\n    \"temperament\": [\n      \"consectetur magna\",\n      \"voluptate ut irure occaecat\"\n    ],\n    \"exerciseNeeds\": \"moderate\",\n    \"groomingNeeds\": \"high\",\n    \"trainability\": \"very-high\",\n    \"goodWithKids\": false,\n    \"goodWithPets\": false,\n    \"description\": \"elit esse nisi\",\n    \"createdAt\": \"1989-02-06T15:05:50.868Z\",\n    \"updatedAt\": \"1946-10-20T22:51:48.752Z\",\n    \"image\": \"http://wJmfSnGAVKZHcRX.jiRTh2Z2JZp7pqvWZhCzfI6sc\"\n  }\n]",
+                "uid": "33439397-085afaed-ecd7-4b4c-8ce8-7cf68920c79e"
+              }
+            ],
+            "uid": "33439397-57776dd8-e87b-4d54-91d1-a11756252771"
+          },
+          {
+            "name": "Get breed by ID",
+            "id": "a9ba8ff9-7449-4295-b3e8-d0937cd2eab7",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "GET",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                }
+              ],
+              "url": {
+                "raw": "{{baseUrl}}/breeds/:id",
+                "host": [
+                  "{{baseUrl}}"
+                ],
+                "path": [
+                  "breeds",
+                  ":id"
+                ],
+                "variable": [
+                  {
+                    "id": "907d050b-e542-418b-96cb-31f21a3d69a3",
+                    "key": "id",
+                    "value": "urn:uuid:a066e792-11a6-c020-59e3-13c78d97415f",
+                    "description": "(Required) "
+                  }
+                ]
+              },
+              "description": "Retrieve detailed information about a specific dog breed"
+            },
+            "response": [
+              {
+                "id": "092800bc-cc7e-46eb-8608-711c1a712a0a",
+                "name": "Breed details",
+                "originalRequest": {
+                  "method": "GET",
+                  "header": [
+                    {
+                      "key": "Accept",
+                      "value": "application/json"
+                    }
+                  ],
+                  "url": {
+                    "raw": "{{baseUrl}}/breeds/:id",
+                    "host": [
+                      "{{baseUrl}}"
+                    ],
+                    "path": [
+                      "breeds",
+                      ":id"
+                    ],
+                    "variable": [
+                      {
+                        "key": "id",
+                        "value": "urn:uuid:a066e792-11a6-c020-59e3-13c78d97415f",
+                        "description": "(Required) "
+                      }
+                    ]
+                  }
+                },
+                "status": "OK",
+                "code": 200,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "{\n  \"id\": \"urn:uuid:7502f75a-8039-e095-7a58-951853c3e955\",\n  \"name\": \"non\",\n  \"group\": \"non-sporting\",\n  \"origin\": \"occaecat consequat \",\n  \"size\": \"medium\",\n  \"lifeSpan\": {\n    \"min\": 9,\n    \"max\": 11\n  },\n  \"temperament\": [\n    \"consectetur velit\",\n    \"Ut nisi\"\n  ],\n  \"exerciseNeeds\": \"low\",\n  \"groomingNeeds\": \"low\",\n  \"trainability\": \"high\",\n  \"goodWithKids\": true,\n  \"goodWithPets\": true,\n  \"description\": \"elit Lorem\",\n  \"createdAt\": \"1950-11-10T02:53:56.369Z\",\n  \"updatedAt\": \"1980-04-09T08:00:41.935Z\",\n  \"image\": \"https://YYCNfRGJAPqUiKoOTdtGgpydkKua.fffZcCjqp29I8dDAmhmT5jn8AO2WYJ-WoSz.Xbg,PA4YECuzj0LphZKARS\"\n}",
+                "uid": "33439397-092800bc-cc7e-46eb-8608-711c1a712a0a"
+              },
+              {
+                "id": "7eb4fc68-eff6-4ae1-a88b-11054697fae4",
+                "name": "Breed not found",
+                "originalRequest": {
+                  "method": "GET",
+                  "header": [
+                    {
+                      "key": "Accept",
+                      "value": "application/json"
+                    }
+                  ],
+                  "url": {
+                    "raw": "{{baseUrl}}/breeds/:id",
+                    "host": [
+                      "{{baseUrl}}"
+                    ],
+                    "path": [
+                      "breeds",
+                      ":id"
+                    ],
+                    "variable": [
+                      {
+                        "key": "id",
+                        "value": "urn:uuid:a066e792-11a6-c020-59e3-13c78d97415f",
+                        "description": "(Required) "
+                      }
+                    ]
+                  }
+                },
+                "status": "Not Found",
+                "code": 404,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "{\n  \"error\": \"labore\",\n  \"message\": \"occae\",\n  \"details\": {}\n}",
+                "uid": "33439397-7eb4fc68-eff6-4ae1-a88b-11054697fae4"
+              }
+            ],
+            "uid": "33439397-a9ba8ff9-7449-4295-b3e8-d0937cd2eab7"
+          },
+          {
+            "name": "Search breeds by name",
+            "id": "d6553ba8-1609-492f-b84c-21fc1f0e7a19",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "GET",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                }
+              ],
+              "url": {
+                "raw": "{{baseUrl}}/breeds/search?q=laborum ex&limit=10",
+                "host": [
+                  "{{baseUrl}}"
+                ],
+                "path": [
+                  "breeds",
+                  "search"
+                ],
+                "query": [
+                  {
+                    "key": "q",
+                    "value": "laborum ex",
+                    "description": "(Required) "
+                  },
+                  {
+                    "key": "limit",
+                    "value": "10"
+                  }
+                ]
+              },
+              "description": "Search for dog breeds by name or partial name match"
+            },
+            "response": [
+              {
+                "id": "36158192-b893-46b1-9a55-54058421f342",
+                "name": "Matching breeds",
+                "originalRequest": {
+                  "method": "GET",
+                  "header": [
+                    {
+                      "key": "Accept",
+                      "value": "application/json"
+                    }
+                  ],
+                  "url": {
+                    "raw": "{{baseUrl}}/breeds/search?q=laborum ex&limit=10",
+                    "host": [
+                      "{{baseUrl}}"
+                    ],
+                    "path": [
+                      "breeds",
+                      "search"
+                    ],
+                    "query": [
+                      {
+                        "key": "q",
+                        "value": "laborum ex"
+                      },
+                      {
+                        "key": "limit",
+                        "value": "10"
+                      }
+                    ]
+                  }
+                },
+                "status": "OK",
+                "code": 200,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "[\n  {\n    \"id\": \"urn:uuid:624badb8-ab36-ddd8-9375-9677818bbabd\",\n    \"name\": \"Duis est\",\n    \"group\": \"working\",\n    \"origin\": \"nisi dolor occaecat Lorem\",\n    \"size\": \"extra-large\",\n    \"lifeSpan\": {\n      \"min\": 9,\n      \"max\": 29\n    },\n    \"temperament\": [\n      \"esse\",\n      \"nisi officia cupidatat\"\n    ],\n    \"exerciseNeeds\": \"high\",\n    \"groomingNeeds\": \"moderate\",\n    \"trainability\": \"high\",\n    \"goodWithKids\": false,\n    \"goodWithPets\": true,\n    \"description\": \"nostrud occaecat Excepteur minim\",\n    \"createdAt\": \"2020-06-08T14:57:18.219Z\",\n    \"updatedAt\": \"2017-07-13T02:40:44.909Z\",\n    \"image\": \"https://aUrsizoYFmgVgNRkVo.attGY\"\n  },\n  {\n    \"id\": \"31bc30ce-dfff-c86c-41d3-f97dad258cf7\",\n    \"name\": \"ea exercitation nisi ulla\",\n    \"group\": \"non-sporting\",\n    \"origin\": \"minim dolor\",\n    \"size\": \"extra-large\",\n    \"lifeSpan\": {\n      \"min\": 14,\n      \"max\": 10\n    },\n    \"temperament\": [\n      \"consectetur magna\",\n      \"voluptate ut irure occaecat\"\n    ],\n    \"exerciseNeeds\": \"moderate\",\n    \"groomingNeeds\": \"high\",\n    \"trainability\": \"very-high\",\n    \"goodWithKids\": false,\n    \"goodWithPets\": false,\n    \"description\": \"elit esse nisi\",\n    \"createdAt\": \"1989-02-06T15:05:50.868Z\",\n    \"updatedAt\": \"1946-10-20T22:51:48.752Z\",\n    \"image\": \"http://wJmfSnGAVKZHcRX.jiRTh2Z2JZp7pqvWZhCzfI6sc\"\n  }\n]",
+                "uid": "33439397-36158192-b893-46b1-9a55-54058421f342"
+              }
+            ],
+            "uid": "33439397-d6553ba8-1609-492f-b84c-21fc1f0e7a19"
+          },
+          {
+            "name": "Get all breed groups",
+            "id": "79593f1d-ff9d-407b-9d46-92e659f5bd1f",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "GET",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                }
+              ],
+              "url": {
+                "raw": "{{baseUrl}}/breeds/groups",
+                "host": [
+                  "{{baseUrl}}"
+                ],
+                "path": [
+                  "breeds",
+                  "groups"
+                ]
+              },
+              "description": "Retrieve a list of all available dog breed groups"
+            },
+            "response": [
+              {
+                "id": "b4dc1411-3ac1-400c-b5f9-3433f2e31964",
+                "name": "List of breed groups with counts",
+                "originalRequest": {
+                  "method": "GET",
+                  "header": [
+                    {
+                      "key": "Accept",
+                      "value": "application/json"
+                    }
+                  ],
+                  "url": {
+                    "raw": "{{baseUrl}}/breeds/groups",
+                    "host": [
+                      "{{baseUrl}}"
+                    ],
+                    "path": [
+                      "breeds",
+                      "groups"
+                    ]
+                  }
+                },
+                "status": "OK",
+                "code": 200,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "{\n  \"groups\": [\n    {\n      \"name\": \"in et\",\n      \"description\": \"ut in\",\n      \"count\": 7534986\n    },\n    {\n      \"name\": \"dolor mollit\",\n      \"description\": \"consequat Lorem dolor\",\n      \"count\": 97599788\n    }\n  ]\n}",
+                "uid": "33439397-b4dc1411-3ac1-400c-b5f9-3433f2e31964"
+              }
+            ],
+            "uid": "33439397-79593f1d-ff9d-407b-9d46-92e659f5bd1f"
+          }
+        ],
+        "id": "4362f8a8-3fbb-4535-b86d-7a3eceb0ab80",
+        "uid": "33439397-4362f8a8-3fbb-4535-b86d-7a3eceb0ab80"
+      },
+      {
+        "name": "Adoption",
+        "item": [
+          {
+            "name": "List adoption applications",
+            "id": "222be2d9-e1a9-4e8f-841f-6933a2289347",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "GET",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                }
+              ],
+              "url": {
+                "raw": "{{baseUrl}}/adoption/applications?status=rejected&dogId=urn:uuid:a066e792-11a6-c020-59e3-13c78d97415f&page=1&limit=10",
+                "host": [
+                  "{{baseUrl}}"
+                ],
+                "path": [
+                  "adoption",
+                  "applications"
+                ],
+                "query": [
+                  {
+                    "key": "status",
+                    "value": "rejected"
+                  },
+                  {
+                    "key": "dogId",
+                    "value": "urn:uuid:a066e792-11a6-c020-59e3-13c78d97415f"
+                  },
+                  {
+                    "key": "page",
+                    "value": "1"
+                  },
+                  {
+                    "key": "limit",
+                    "value": "10"
+                  }
+                ]
+              },
+              "description": "Retrieve all adoption applications with optional status filtering"
+            },
+            "response": [
+              {
+                "id": "779c6a5a-240a-4f36-8209-522a5269139a",
+                "name": "List of adoption applications",
+                "originalRequest": {
+                  "method": "GET",
+                  "header": [
+                    {
+                      "key": "Accept",
+                      "value": "application/json"
+                    }
+                  ],
+                  "url": {
+                    "raw": "{{baseUrl}}/adoption/applications?status=rejected&dogId=urn:uuid:a066e792-11a6-c020-59e3-13c78d97415f&page=1&limit=10",
+                    "host": [
+                      "{{baseUrl}}"
+                    ],
+                    "path": [
+                      "adoption",
+                      "applications"
+                    ],
+                    "query": [
+                      {
+                        "key": "status",
+                        "value": "rejected"
+                      },
+                      {
+                        "key": "dogId",
+                        "value": "urn:uuid:a066e792-11a6-c020-59e3-13c78d97415f"
+                      },
+                      {
+                        "key": "page",
+                        "value": "1"
+                      },
+                      {
+                        "key": "limit",
+                        "value": "10"
+                      }
+                    ]
+                  }
+                },
+                "status": "OK",
+                "code": 200,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "{\n  \"data\": [\n    {\n      \"id\": \"urn:uuid:bab5eff7-f19f-1b04-7382-c9eb36aacb51\",\n      \"dogId\": \"e408882c-c53c-9a2f-ff92-7bcf0fe560a0\",\n      \"applicantName\": \"ullamco elit\",\n      \"applicantEmail\": \"S1JFZNoPmd@CGfAeuxtPVOSvAsFwsBkFm.vj\",\n      \"applicantPhone\": \"minim consequat\",\n      \"address\": {\n        \"street\": \"enim dolore anim Ut\",\n        \"city\": \"magna minim reprehenderit tempor\",\n        \"state\": \"quis et\",\n        \"zipCode\": \"Excepteur \"\n      },\n      \"housingType\": \"other\",\n      \"hasYard\": false,\n      \"hasOtherPets\": true,\n      \"experience\": \"none\",\n      \"workSchedule\": \"laboris quis culpa\",\n      \"reason\": \"ad aliqua ut esse\",\n      \"status\": \"rejected\",\n      \"createdAt\": \"1948-03-26T20:05:06.730Z\",\n      \"updatedAt\": \"2022-09-05T17:19:17.022Z\",\n      \"otherPetsDetails\": \"ad aliquip ipsum\",\n      \"notes\": \"aliquip quis in ut\"\n    },\n    {\n      \"id\": \"urn:uuid:9fb7a975-22bb-3606-e156-4dc3a6d12014\",\n      \"dogId\": \"256c847e-8492-e3f9-7892-f108a65f9941\",\n      \"applicantName\": \"in minim ullamco\",\n      \"applicantEmail\": \"DVkEfgRn0@lSeGpezKYgjsFzHzcOljHPnSBBr.qw\",\n      \"applicantPhone\": \"laborum velit in\",\n      \"address\": {\n        \"street\": \"exercitation culpa cillum\",\n        \"city\": \"proident non ut nostrud\",\n        \"state\": \"pariatur magn\",\n        \"zipCode\": \"dolor\"\n      },\n      \"housingType\": \"apartment\",\n      \"hasYard\": false,\n      \"hasOtherPets\": false,\n      \"experience\": \"some\",\n      \"workSchedule\": \"aliquip in\",\n      \"reason\": \"nulla esse aliqua Duis\",\n      \"status\": \"pending\",\n      \"createdAt\": \"1949-02-23T04:40:17.480Z\",\n      \"updatedAt\": \"1963-07-30T17:41:03.559Z\",\n      \"otherPetsDetails\": \"est laborum\",\n      \"notes\": \"laborum ea nostrud\"\n    }\n  ],\n  \"pagination\": {\n    \"page\": 93014210,\n    \"limit\": -66325103,\n    \"total\": 46856288,\n    \"totalPages\": -45135355\n  }\n}",
+                "uid": "33439397-779c6a5a-240a-4f36-8209-522a5269139a"
+              }
+            ],
+            "uid": "33439397-222be2d9-e1a9-4e8f-841f-6933a2289347"
+          },
+          {
+            "name": "Submit adoption application",
+            "id": "ab446e59-8dd1-4fe6-b864-dabc9854875c",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "POST",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n  \"dogId\": \"512a38e0-68a1-238a-5c6c-26e03f2f157f\",\n  \"applicantName\": \"enim Duis\",\n  \"applicantEmail\": \"DuQLNhmr@OLQOenVvdSUdflRgxoNfRaVwVYJkI.ucfh\",\n  \"applicantPhone\": \"dolor officia \",\n  \"address\": {\n    \"street\": \"velit aliqua nulla minim\",\n    \"city\": \"anim Lorem\",\n    \"state\": \"veniam deserunt\",\n    \"zipCode\": \"ipsum Ut \"\n  },\n  \"housingType\": \"condo\",\n  \"hasYard\": true,\n  \"hasOtherPets\": false,\n  \"experience\": \"experienced\",\n  \"workSchedule\": \"qui culpa dolore\",\n  \"reason\": \"aliquip ut\",\n  \"otherPetsDetails\": \"ipsum est in deserunt\"\n}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              },
+              "url": {
+                "raw": "{{baseUrl}}/adoption/applications",
+                "host": [
+                  "{{baseUrl}}"
+                ],
+                "path": [
+                  "adoption",
+                  "applications"
+                ]
+              },
+              "description": "Submit a new adoption application for a dog"
+            },
+            "response": [
+              {
+                "id": "b6f65602-38e6-4009-9f52-e217e6454f84",
+                "name": "Adoption application created successfully",
+                "originalRequest": {
+                  "method": "POST",
+                  "header": [
+                    {
+                      "key": "Accept",
+                      "value": "application/json"
+                    }
+                  ],
+                  "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"dogId\": \"512a38e0-68a1-238a-5c6c-26e03f2f157f\",\n  \"applicantName\": \"enim Duis\",\n  \"applicantEmail\": \"DuQLNhmr@OLQOenVvdSUdflRgxoNfRaVwVYJkI.ucfh\",\n  \"applicantPhone\": \"dolor officia \",\n  \"address\": {\n    \"street\": \"velit aliqua nulla minim\",\n    \"city\": \"anim Lorem\",\n    \"state\": \"veniam deserunt\",\n    \"zipCode\": \"ipsum Ut \"\n  },\n  \"housingType\": \"condo\",\n  \"hasYard\": true,\n  \"hasOtherPets\": false,\n  \"experience\": \"experienced\",\n  \"workSchedule\": \"qui culpa dolore\",\n  \"reason\": \"aliquip ut\",\n  \"otherPetsDetails\": \"ipsum est in deserunt\"\n}",
+                    "options": {
+                      "raw": {
+                        "language": "json"
+                      }
+                    }
+                  },
+                  "url": {
+                    "raw": "{{baseUrl}}/adoption/applications",
+                    "host": [
+                      "{{baseUrl}}"
+                    ],
+                    "path": [
+                      "adoption",
+                      "applications"
+                    ]
+                  }
+                },
+                "status": "Created",
+                "code": 201,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "{\n  \"id\": \"492d37f5-a5ef-0c7f-512f-c800e1b0c260\",\n  \"dogId\": \"060c7a1b-ac9e-076a-7310-3fb1dd00a44b\",\n  \"applicantName\": \"consectetur cupidatat pariatur no\",\n  \"applicantEmail\": \"iNcJJ8@FPjI.mdm\",\n  \"applicantPhone\": \"irureofficia ad\",\n  \"address\": {\n    \"street\": \"eiusm\",\n    \"city\": \"Lorem sit consectetur aliqua\",\n    \"state\": \"est amet\",\n    \"zipCode\": \"in in\"\n  },\n  \"housingType\": \"condo\",\n  \"hasYard\": false,\n  \"hasOtherPets\": false,\n  \"experience\": \"experienced\",\n  \"workSchedule\": \"labore\",\n  \"reason\": \"ex mollitaliquip fugiat \",\n  \"status\": \"withdrawn\",\n  \"createdAt\": \"1988-12-30T03:13:58.777Z\",\n  \"updatedAt\": \"1966-01-17T04:26:02.595Z\",\n  \"otherPetsDetails\": \"eiusmod dolor pariatur dolore\",\n  \"notes\": \"Ut non in\"\n}",
+                "uid": "33439397-b6f65602-38e6-4009-9f52-e217e6454f84"
+              },
+              {
+                "id": "61adc59f-0cef-48de-909c-cff69bc84fb5",
+                "name": "Invalid input data",
+                "originalRequest": {
+                  "method": "POST",
+                  "header": [
+                    {
+                      "key": "Accept",
+                      "value": "application/json"
+                    }
+                  ],
+                  "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"dogId\": \"512a38e0-68a1-238a-5c6c-26e03f2f157f\",\n  \"applicantName\": \"enim Duis\",\n  \"applicantEmail\": \"DuQLNhmr@OLQOenVvdSUdflRgxoNfRaVwVYJkI.ucfh\",\n  \"applicantPhone\": \"dolor officia \",\n  \"address\": {\n    \"street\": \"velit aliqua nulla minim\",\n    \"city\": \"anim Lorem\",\n    \"state\": \"veniam deserunt\",\n    \"zipCode\": \"ipsum Ut \"\n  },\n  \"housingType\": \"condo\",\n  \"hasYard\": true,\n  \"hasOtherPets\": false,\n  \"experience\": \"experienced\",\n  \"workSchedule\": \"qui culpa dolore\",\n  \"reason\": \"aliquip ut\",\n  \"otherPetsDetails\": \"ipsum est in deserunt\"\n}",
+                    "options": {
+                      "raw": {
+                        "language": "json"
+                      }
+                    }
+                  },
+                  "url": {
+                    "raw": "{{baseUrl}}/adoption/applications",
+                    "host": [
+                      "{{baseUrl}}"
+                    ],
+                    "path": [
+                      "adoption",
+                      "applications"
+                    ]
+                  }
+                },
+                "status": "Bad Request",
+                "code": 400,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "{\n  \"error\": \"labore\",\n  \"message\": \"occae\",\n  \"details\": {}\n}",
+                "uid": "33439397-61adc59f-0cef-48de-909c-cff69bc84fb5"
+              },
+              {
+                "id": "764f3df4-546e-45ba-9f53-f835221a39ff",
+                "name": "Dog not found",
+                "originalRequest": {
+                  "method": "POST",
+                  "header": [
+                    {
+                      "key": "Accept",
+                      "value": "application/json"
+                    }
+                  ],
+                  "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"dogId\": \"512a38e0-68a1-238a-5c6c-26e03f2f157f\",\n  \"applicantName\": \"enim Duis\",\n  \"applicantEmail\": \"DuQLNhmr@OLQOenVvdSUdflRgxoNfRaVwVYJkI.ucfh\",\n  \"applicantPhone\": \"dolor officia \",\n  \"address\": {\n    \"street\": \"velit aliqua nulla minim\",\n    \"city\": \"anim Lorem\",\n    \"state\": \"veniam deserunt\",\n    \"zipCode\": \"ipsum Ut \"\n  },\n  \"housingType\": \"condo\",\n  \"hasYard\": true,\n  \"hasOtherPets\": false,\n  \"experience\": \"experienced\",\n  \"workSchedule\": \"qui culpa dolore\",\n  \"reason\": \"aliquip ut\",\n  \"otherPetsDetails\": \"ipsum est in deserunt\"\n}",
+                    "options": {
+                      "raw": {
+                        "language": "json"
+                      }
+                    }
+                  },
+                  "url": {
+                    "raw": "{{baseUrl}}/adoption/applications",
+                    "host": [
+                      "{{baseUrl}}"
+                    ],
+                    "path": [
+                      "adoption",
+                      "applications"
+                    ]
+                  }
+                },
+                "status": "Not Found",
+                "code": 404,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "{\n  \"error\": \"labore\",\n  \"message\": \"occae\",\n  \"details\": {}\n}",
+                "uid": "33439397-764f3df4-546e-45ba-9f53-f835221a39ff"
+              }
+            ],
+            "uid": "33439397-ab446e59-8dd1-4fe6-b864-dabc9854875c"
+          },
+          {
+            "name": "Get adoption application",
+            "id": "8292f2f3-882c-4e1f-acb9-edca02646d73",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "GET",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                }
+              ],
+              "url": {
+                "raw": "{{baseUrl}}/adoption/applications/:id",
+                "host": [
+                  "{{baseUrl}}"
+                ],
+                "path": [
+                  "adoption",
+                  "applications",
+                  ":id"
+                ],
+                "variable": [
+                  {
+                    "id": "cb787fc8-0d7b-42d1-ad46-1117f015460c",
+                    "key": "id",
+                    "value": "urn:uuid:a066e792-11a6-c020-59e3-13c78d97415f",
+                    "description": "(Required) "
+                  }
+                ]
+              },
+              "description": "Retrieve a specific adoption application by ID"
+            },
+            "response": [
+              {
+                "id": "115c0e78-383d-4e35-b3b7-a951b1503c41",
+                "name": "Adoption application details",
+                "originalRequest": {
+                  "method": "GET",
+                  "header": [
+                    {
+                      "key": "Accept",
+                      "value": "application/json"
+                    }
+                  ],
+                  "url": {
+                    "raw": "{{baseUrl}}/adoption/applications/:id",
+                    "host": [
+                      "{{baseUrl}}"
+                    ],
+                    "path": [
+                      "adoption",
+                      "applications",
+                      ":id"
+                    ],
+                    "variable": [
+                      {
+                        "key": "id",
+                        "value": "urn:uuid:a066e792-11a6-c020-59e3-13c78d97415f",
+                        "description": "(Required) "
+                      }
+                    ]
+                  }
+                },
+                "status": "OK",
+                "code": 200,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "{\n  \"id\": \"492d37f5-a5ef-0c7f-512f-c800e1b0c260\",\n  \"dogId\": \"060c7a1b-ac9e-076a-7310-3fb1dd00a44b\",\n  \"applicantName\": \"consectetur cupidatat pariatur no\",\n  \"applicantEmail\": \"iNcJJ8@FPjI.mdm\",\n  \"applicantPhone\": \"irureofficia ad\",\n  \"address\": {\n    \"street\": \"eiusm\",\n    \"city\": \"Lorem sit consectetur aliqua\",\n    \"state\": \"est amet\",\n    \"zipCode\": \"in in\"\n  },\n  \"housingType\": \"condo\",\n  \"hasYard\": false,\n  \"hasOtherPets\": false,\n  \"experience\": \"experienced\",\n  \"workSchedule\": \"labore\",\n  \"reason\": \"ex mollitaliquip fugiat \",\n  \"status\": \"withdrawn\",\n  \"createdAt\": \"1988-12-30T03:13:58.777Z\",\n  \"updatedAt\": \"1966-01-17T04:26:02.595Z\",\n  \"otherPetsDetails\": \"eiusmod dolor pariatur dolore\",\n  \"notes\": \"Ut non in\"\n}",
+                "uid": "33439397-115c0e78-383d-4e35-b3b7-a951b1503c41"
+              },
+              {
+                "id": "2b0f525a-5142-48ee-9217-35599d36b8cb",
+                "name": "Application not found",
+                "originalRequest": {
+                  "method": "GET",
+                  "header": [
+                    {
+                      "key": "Accept",
+                      "value": "application/json"
+                    }
+                  ],
+                  "url": {
+                    "raw": "{{baseUrl}}/adoption/applications/:id",
+                    "host": [
+                      "{{baseUrl}}"
+                    ],
+                    "path": [
+                      "adoption",
+                      "applications",
+                      ":id"
+                    ],
+                    "variable": [
+                      {
+                        "key": "id",
+                        "value": "urn:uuid:a066e792-11a6-c020-59e3-13c78d97415f",
+                        "description": "(Required) "
+                      }
+                    ]
+                  }
+                },
+                "status": "Not Found",
+                "code": 404,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "{\n  \"error\": \"labore\",\n  \"message\": \"occae\",\n  \"details\": {}\n}",
+                "uid": "33439397-2b0f525a-5142-48ee-9217-35599d36b8cb"
+              }
+            ],
+            "uid": "33439397-8292f2f3-882c-4e1f-acb9-edca02646d73"
+          },
+          {
+            "name": "Update application status",
+            "id": "d5a2dda4-5a70-4afe-90cd-9c480b2e2f1a",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "PUT",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n  \"status\": \"approved\",\n  \"notes\": \"voluptate sint\"\n}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              },
+              "url": {
+                "raw": "{{baseUrl}}/adoption/applications/:id/status",
+                "host": [
+                  "{{baseUrl}}"
+                ],
+                "path": [
+                  "adoption",
+                  "applications",
+                  ":id",
+                  "status"
+                ],
+                "variable": [
+                  {
+                    "id": "3cda9af3-6c6e-4671-bb62-330ac7c6e971",
+                    "key": "id",
+                    "value": "urn:uuid:a066e792-11a6-c020-59e3-13c78d97415f",
+                    "description": "(Required) "
+                  }
+                ]
+              },
+              "description": "Update the status of an adoption application (approve, reject, etc.)"
+            },
+            "response": [
+              {
+                "id": "55bf8a2c-2cb8-49ad-84c8-d1caa5d72daa",
+                "name": "Application status updated successfully",
+                "originalRequest": {
+                  "method": "PUT",
+                  "header": [
+                    {
+                      "key": "Accept",
+                      "value": "application/json"
+                    }
+                  ],
+                  "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"status\": \"approved\",\n  \"notes\": \"voluptate sint\"\n}",
+                    "options": {
+                      "raw": {
+                        "language": "json"
+                      }
+                    }
+                  },
+                  "url": {
+                    "raw": "{{baseUrl}}/adoption/applications/:id/status",
+                    "host": [
+                      "{{baseUrl}}"
+                    ],
+                    "path": [
+                      "adoption",
+                      "applications",
+                      ":id",
+                      "status"
+                    ],
+                    "variable": [
+                      {
+                        "key": "id",
+                        "value": "urn:uuid:a066e792-11a6-c020-59e3-13c78d97415f",
+                        "description": "(Required) "
+                      }
+                    ]
+                  }
+                },
+                "status": "OK",
+                "code": 200,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "{\n  \"id\": \"492d37f5-a5ef-0c7f-512f-c800e1b0c260\",\n  \"dogId\": \"060c7a1b-ac9e-076a-7310-3fb1dd00a44b\",\n  \"applicantName\": \"consectetur cupidatat pariatur no\",\n  \"applicantEmail\": \"iNcJJ8@FPjI.mdm\",\n  \"applicantPhone\": \"irureofficia ad\",\n  \"address\": {\n    \"street\": \"eiusm\",\n    \"city\": \"Lorem sit consectetur aliqua\",\n    \"state\": \"est amet\",\n    \"zipCode\": \"in in\"\n  },\n  \"housingType\": \"condo\",\n  \"hasYard\": false,\n  \"hasOtherPets\": false,\n  \"experience\": \"experienced\",\n  \"workSchedule\": \"labore\",\n  \"reason\": \"ex mollitaliquip fugiat \",\n  \"status\": \"withdrawn\",\n  \"createdAt\": \"1988-12-30T03:13:58.777Z\",\n  \"updatedAt\": \"1966-01-17T04:26:02.595Z\",\n  \"otherPetsDetails\": \"eiusmod dolor pariatur dolore\",\n  \"notes\": \"Ut non in\"\n}",
+                "uid": "33439397-55bf8a2c-2cb8-49ad-84c8-d1caa5d72daa"
+              },
+              {
+                "id": "925ecd3c-9288-454e-9238-dd72cf116bfa",
+                "name": "Application not found",
+                "originalRequest": {
+                  "method": "PUT",
+                  "header": [
+                    {
+                      "key": "Accept",
+                      "value": "application/json"
+                    }
+                  ],
+                  "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"status\": \"approved\",\n  \"notes\": \"voluptate sint\"\n}",
+                    "options": {
+                      "raw": {
+                        "language": "json"
+                      }
+                    }
+                  },
+                  "url": {
+                    "raw": "{{baseUrl}}/adoption/applications/:id/status",
+                    "host": [
+                      "{{baseUrl}}"
+                    ],
+                    "path": [
+                      "adoption",
+                      "applications",
+                      ":id",
+                      "status"
+                    ],
+                    "variable": [
+                      {
+                        "key": "id",
+                        "value": "urn:uuid:a066e792-11a6-c020-59e3-13c78d97415f",
+                        "description": "(Required) "
+                      }
+                    ]
+                  }
+                },
+                "status": "Not Found",
+                "code": 404,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "{\n  \"error\": \"labore\",\n  \"message\": \"occae\",\n  \"details\": {}\n}",
+                "uid": "33439397-925ecd3c-9288-454e-9238-dd72cf116bfa"
+              }
+            ],
+            "uid": "33439397-d5a2dda4-5a70-4afe-90cd-9c480b2e2f1a"
+          },
+          {
+            "name": "Get available dogs",
+            "id": "5b65b408-7aa6-462d-87a1-8e07c4562e11",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "GET",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                }
+              ],
+              "url": {
+                "raw": "{{baseUrl}}/adoption/available?breed=in minim cillum ea ex&size=large&age_max=79241190&goodWithKids=false",
+                "host": [
+                  "{{baseUrl}}"
+                ],
+                "path": [
+                  "adoption",
+                  "available"
+                ],
+                "query": [
+                  {
+                    "key": "breed",
+                    "value": "in minim cillum ea ex"
+                  },
+                  {
+                    "key": "size",
+                    "value": "large"
+                  },
+                  {
+                    "key": "age_max",
+                    "value": "79241190"
+                  },
+                  {
+                    "key": "goodWithKids",
+                    "value": "false"
+                  }
+                ]
+              },
+              "description": "Retrieve dogs that are available for adoption (no approved applications)"
+            },
+            "response": [
+              {
+                "id": "600b4ab7-7c83-4464-9c84-cc9204dcb01b",
+                "name": "Available dogs for adoption",
+                "originalRequest": {
+                  "method": "GET",
+                  "header": [
+                    {
+                      "key": "Accept",
+                      "value": "application/json"
+                    }
+                  ],
+                  "url": {
+                    "raw": "{{baseUrl}}/adoption/available?breed=in minim cillum ea ex&size=large&age_max=79241190&goodWithKids=false",
+                    "host": [
+                      "{{baseUrl}}"
+                    ],
+                    "path": [
+                      "adoption",
+                      "available"
+                    ],
+                    "query": [
+                      {
+                        "key": "breed",
+                        "value": "in minim cillum ea ex"
+                      },
+                      {
+                        "key": "size",
+                        "value": "large"
+                      },
+                      {
+                        "key": "age_max",
+                        "value": "79241190"
+                      },
+                      {
+                        "key": "goodWithKids",
+                        "value": "false"
+                      }
+                    ]
+                  }
+                },
+                "status": "OK",
+                "code": 200,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "[\n  {\n    \"id\": \"7a797c21-1a9c-ef34-598d-ed94e11d9a84\",\n    \"name\": \"reprehenderit occaecat cillum\",\n    \"breed\": \"nisi in\",\n    \"age\": 14,\n    \"weight\": 49.35811810809304,\n    \"gender\": \"female\",\n    \"color\": \"dolore mollit anim dolor minim\",\n    \"size\": \"extra-large\",\n    \"temperament\": [\n      \"ut nostrud culpa\",\n      \"reprehenderit amet dolor\"\n    ],\n    \"isNeutered\": false,\n    \"photos\": [\n      \"https://cqZcEkazcZDSAvZVobWCCJPNlAPtR.kvyc5imwz7l-uvA8n+qzLcmZ0ecMTdK-v5CHvHq5lloitFyAMzf0tByXc8a-h0gp03\",\n      \"http://LHwHlddrJVlTkahRpgGVsO.iqww1R.4yTYyE8Rn3b7Zy2i-6ie1frglw6vf\"\n    ],\n    \"description\": \"id\",\n    \"createdAt\": \"1963-08-18T03:44:26.178Z\",\n    \"updatedAt\": \"1991-09-13T02:42:48.413Z\",\n    \"microchipId\": \"exercitation occaecat sit ipsum\"\n  },\n  {\n    \"id\": \"85f33714-aed1-c74a-ee66-6063c91f4497\",\n    \"name\": \"Excepteur incididun\",\n    \"breed\": \"elit enim es\",\n    \"age\": 11,\n    \"weight\": 32.51564609935583,\n    \"gender\": \"male\",\n    \"color\": \"pr\",\n    \"size\": \"small\",\n    \"temperament\": [\n      \"nulla eu mollit proident officia\",\n      \"quis in est\"\n    ],\n    \"isNeutered\": true,\n    \"photos\": [\n      \"https://cfrxMAaVkZFWviiRzQyRuojPvYgMvQy.zhyzr1G-FlV\",\n      \"http://Z.luxNZJDbvAUJr.IKRoFKQdYvgjEUg.pvyQXUk1OhpaZ\"\n    ],\n    \"description\": \"Lorem\",\n    \"createdAt\": \"2003-04-29T16:24:34.357Z\",\n    \"updatedAt\": \"1960-06-26T09:47:14.317Z\",\n    \"microchipId\": \"exercitation dolor\"\n  }\n]",
+                "uid": "33439397-600b4ab7-7c83-4464-9c84-cc9204dcb01b"
+              }
+            ],
+            "uid": "33439397-5b65b408-7aa6-462d-87a1-8e07c4562e11"
+          },
+          {
+            "name": "Get adoption statistics",
+            "id": "7e2ccd37-1850-4d6b-bf5d-ed687ca07185",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "GET",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                }
+              ],
+              "url": {
+                "raw": "{{baseUrl}}/adoption/stats",
+                "host": [
+                  "{{baseUrl}}"
+                ],
+                "path": [
+                  "adoption",
+                  "stats"
+                ]
+              },
+              "description": "Retrieve statistics about adoptions and applications"
+            },
+            "response": [
+              {
+                "id": "a0ecb813-b4fb-4fbc-8edb-227c749f344c",
+                "name": "Adoption statistics",
+                "originalRequest": {
+                  "method": "GET",
+                  "header": [
+                    {
+                      "key": "Accept",
+                      "value": "application/json"
+                    }
+                  ],
+                  "url": {
+                    "raw": "{{baseUrl}}/adoption/stats",
+                    "host": [
+                      "{{baseUrl}}"
+                    ],
+                    "path": [
+                      "adoption",
+                      "stats"
+                    ]
+                  }
+                },
+                "status": "OK",
+                "code": 200,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "{\n  \"totalDogs\": -67785142,\n  \"availableForAdoption\": 19605767,\n  \"totalApplications\": 72889978,\n  \"pendingApplications\": -7490812,\n  \"approvedApplications\": -21223516,\n  \"rejectedApplications\": -90530007,\n  \"adoptionRate\": 68361685.76523018\n}",
+                "uid": "33439397-a0ecb813-b4fb-4fbc-8edb-227c749f344c"
+              }
+            ],
+            "uid": "33439397-7e2ccd37-1850-4d6b-bf5d-ed687ca07185"
+          }
+        ],
+        "id": "a41923d7-f2d8-4778-9325-ee1ea0801766",
+        "uid": "33439397-a41923d7-f2d8-4778-9325-ee1ea0801766"
+      },
+      {
+        "name": "Health",
+        "item": [
+          {
+            "name": "List health records",
+            "id": "b09328f8-d281-44f2-a2ce-c2abd9f63d83",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "GET",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                }
+              ],
+              "url": {
+                "raw": "{{baseUrl}}/health/records?dogId=urn:uuid:a066e792-11a6-c020-59e3-13c78d97415f&type=grooming&veterinarian=in minim cillum ea ex&dateFrom=1976-03-02&dateTo=1976-03-02&page=1&limit=10",
+                "host": [
+                  "{{baseUrl}}"
+                ],
+                "path": [
+                  "health",
+                  "records"
+                ],
+                "query": [
+                  {
+                    "key": "dogId",
+                    "value": "urn:uuid:a066e792-11a6-c020-59e3-13c78d97415f"
+                  },
+                  {
+                    "key": "type",
+                    "value": "grooming"
+                  },
+                  {
+                    "key": "veterinarian",
+                    "value": "in minim cillum ea ex"
+                  },
+                  {
+                    "key": "dateFrom",
+                    "value": "1976-03-02"
+                  },
+                  {
+                    "key": "dateTo",
+                    "value": "1976-03-02"
+                  },
+                  {
+                    "key": "page",
+                    "value": "1"
+                  },
+                  {
+                    "key": "limit",
+                    "value": "10"
+                  }
+                ]
+              },
+              "description": "Retrieve health records with optional filtering by dog or record type"
+            },
+            "response": [
+              {
+                "id": "7da13c13-b3be-4594-aefc-cc8ec223aec4",
+                "name": "List of health records",
+                "originalRequest": {
+                  "method": "GET",
+                  "header": [
+                    {
+                      "key": "Accept",
+                      "value": "application/json"
+                    }
+                  ],
+                  "url": {
+                    "raw": "{{baseUrl}}/health/records?dogId=urn:uuid:a066e792-11a6-c020-59e3-13c78d97415f&type=grooming&veterinarian=in minim cillum ea ex&dateFrom=1976-03-02&dateTo=1976-03-02&page=1&limit=10",
+                    "host": [
+                      "{{baseUrl}}"
+                    ],
+                    "path": [
+                      "health",
+                      "records"
+                    ],
+                    "query": [
+                      {
+                        "key": "dogId",
+                        "value": "urn:uuid:a066e792-11a6-c020-59e3-13c78d97415f"
+                      },
+                      {
+                        "key": "type",
+                        "value": "grooming"
+                      },
+                      {
+                        "key": "veterinarian",
+                        "value": "in minim cillum ea ex"
+                      },
+                      {
+                        "key": "dateFrom",
+                        "value": "1976-03-02"
+                      },
+                      {
+                        "key": "dateTo",
+                        "value": "1976-03-02"
+                      },
+                      {
+                        "key": "page",
+                        "value": "1"
+                      },
+                      {
+                        "key": "limit",
+                        "value": "10"
+                      }
+                    ]
+                  }
+                },
+                "status": "OK",
+                "code": 200,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "{\n  \"data\": [\n    {\n      \"id\": \"24dfd66e-11c2-150e-b8e1-a4376a5d3286\",\n      \"dogId\": \"044d5a83-2f38-4064-2883-dcee797b2400\",\n      \"type\": \"treatment\",\n      \"date\": \"1946-06-08\",\n      \"veterinarian\": \"tempor nulla deserunt officia\",\n      \"clinic\": \"ad adipisicing\",\n      \"description\": \"commodo sint officia ipsum\",\n      \"createdAt\": \"2011-06-05T02:21:55.774Z\",\n      \"updatedAt\": \"2008-06-30T10:38:54.579Z\",\n      \"medications\": [\n        {\n          \"name\": \"sunt enim laborum\",\n          \"dosage\": \"ullamco quis Duis eu\",\n          \"frequency\": \"aute dolor reprehenderit consequat\"\n        },\n        {\n          \"name\": \"in\",\n          \"dosage\": \"aliquip anim officia\",\n          \"frequency\": \"in dolor\"\n        }\n      ],\n      \"cost\": 86420214.23412746,\n      \"followUpDate\": \"2002-03-11\",\n      \"notes\": \"tempor Lorem dolor\",\n      \"attachments\": [\n        \"http://KNojnIKBlHLfJdvEjYACOYJsBxY.jdQIL3I.jZVVZWqLYwET84ld,7AdHJ4AVEBP5EiVxp\",\n        \"https://QtOnHGAiTXBAdOjtMUSa.ilfzVMUpTLiXN1RpXIUCUj5e-zY6-lrb\"\n      ]\n    },\n    {\n      \"id\": \"1a95677b-3306-15b6-8cfb-e612dbbfcdd6\",\n      \"dogId\": \"urn:uuid:1ec3b0bc-4b03-0cdd-e13b-4c0f450d1eed\",\n      \"type\": \"treatment\",\n      \"date\": \"1955-05-15\",\n      \"veterinarian\": \"laboris occaecat dolore anim dolore\",\n      \"clinic\": \"mollit cupidatat cillum ut nisi\",\n      \"description\": \"exercitation\",\n      \"createdAt\": \"1975-07-12T16:53:39.775Z\",\n      \"updatedAt\": \"1977-10-25T19:50:37.295Z\",\n      \"medications\": [\n        {\n          \"name\": \"id in\",\n          \"dosage\": \"cupi\",\n          \"frequency\": \"aliqua deserunt tempor\"\n        },\n        {\n          \"name\": \"inci\",\n          \"dosage\": \"cillum \",\n          \"frequency\": \"in officia dolor labore\"\n        }\n      ],\n      \"cost\": 82970075.13474177,\n      \"followUpDate\": \"2010-05-24\",\n      \"notes\": \"minim incididunt eu aliqua\",\n      \"attachments\": [\n        \"https://LJHMEMZTngUzuJE.vgVsHwq\",\n        \"https://vQESiHZDMKUfJjz.vptyyYUGhvhV-5jeK7Es58uVKqNiz9,Nlp16la-pUexJmhgvcIMDJwAEkW\"\n      ]\n    }\n  ],\n  \"pagination\": {\n    \"page\": -25281168,\n    \"limit\": -47150009,\n    \"total\": 42886339,\n    \"totalPages\": -58151147\n  }\n}",
+                "uid": "33439397-7da13c13-b3be-4594-aefc-cc8ec223aec4"
+              }
+            ],
+            "uid": "33439397-b09328f8-d281-44f2-a2ce-c2abd9f63d83"
+          },
+          {
+            "name": "Create health record",
+            "id": "5ff89e65-89c3-49f6-a3d2-af38f31e0161",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "POST",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n  \"dogId\": \"c7b56efb-a342-a278-e3e5-f0299bae40b8\",\n  \"type\": \"dental\",\n  \"date\": \"1961-05-24\",\n  \"veterinarian\": \"dolor ipsum\",\n  \"clinic\": \"irure nulla amet nostrud\",\n  \"description\": \"ea dolore occaecat sunt consectetur\",\n  \"medications\": [\n    {\n      \"name\": \"proident dolore lab\",\n      \"dosage\": \"enim Ut cons\",\n      \"frequency\": \"est Duis et\"\n    },\n    {\n      \"name\": \"dolore anim est laboris\",\n      \"dosage\": \"culpa nisi ut\",\n      \"frequency\": \"ex aliqua Lorem\"\n    }\n  ],\n  \"cost\": 72820838.00437997,\n  \"followUpDate\": \"1974-07-13\",\n  \"notes\": \"proident in\",\n  \"attachments\": [\n    \"http://LLIARBhZdUoUjFr.swKnrEH7F5uDqv3nuwxQtKUEiS3A,oZ\",\n    \"http://NkusxHy.bdwrx6dG,IQza,KdasV1JV\"\n  ]\n}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              },
+              "url": {
+                "raw": "{{baseUrl}}/health/records",
+                "host": [
+                  "{{baseUrl}}"
+                ],
+                "path": [
+                  "health",
+                  "records"
+                ]
+              },
+              "description": "Add a new health record for a dog"
+            },
+            "response": [
+              {
+                "id": "ca4f7f82-ec35-4cf8-b09d-c3bb96ab6d21",
+                "name": "Health record created successfully",
+                "originalRequest": {
+                  "method": "POST",
+                  "header": [
+                    {
+                      "key": "Accept",
+                      "value": "application/json"
+                    }
+                  ],
+                  "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"dogId\": \"228b0cc2-b391-7560-ff7f-0c0fa1e1b013\",\n  \"type\": \"grooming\",\n  \"date\": \"1984-04-16\",\n  \"veterinarian\": \"laboris eiusmod Duis est\",\n  \"clinic\": \"mollit\",\n  \"description\": \"aliquip Excepteur dolor dolore\",\n  \"medications\": [\n    {\n      \"name\": \"deserunt\",\n      \"dosage\": \"enim ut Ut eu\",\n      \"frequency\": \"cupidatat fugiat esse\"\n    },\n    {\n      \"name\": \"esse nisi ut ex\",\n      \"dosage\": \"culpa laboris Lorem\",\n      \"frequency\": \"voluptate adipisicing\"\n    }\n  ],\n  \"cost\": 24812486.615993112,\n  \"followUpDate\": \"1967-09-20\",\n  \"notes\": \"ullamco nisi\",\n  \"attachments\": [\n    \"https://fgijpaNsSsnsXJDNpbG.tdwXDbpeg5Qb2AZ.o4,BoR9TASm5yfaK0WsC5.U0yhhwK3db2fCdhRidvfFIWedlc\",\n    \"https://YGVhgo.ltrlin1qEQKl5qNkZfnisY1ZB5WBrpPuCZ1nV\"\n  ]\n}",
+                    "options": {
+                      "raw": {
+                        "language": "json"
+                      }
+                    }
+                  },
+                  "url": {
+                    "raw": "{{baseUrl}}/health/records",
+                    "host": [
+                      "{{baseUrl}}"
+                    ],
+                    "path": [
+                      "health",
+                      "records"
+                    ]
+                  }
+                },
+                "status": "Created",
+                "code": 201,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "{\n  \"id\": \"urn:uuid:8bcb1c6e-d887-a5f2-fc3a-80286919b806\",\n  \"dogId\": \"fd6f905f-3009-993a-56d6-65d64e86e3ed\",\n  \"type\": \"treatment\",\n  \"date\": \"1998-12-06\",\n  \"veterinarian\": \"dolore dolore\",\n  \"clinic\": \"fugiat et \",\n  \"description\": \"eiusmod cillum sint\",\n  \"createdAt\": \"2010-04-01T00:06:56.214Z\",\n  \"updatedAt\": \"1981-02-04T17:37:18.501Z\",\n  \"medications\": [\n    {\n      \"name\": \"fugiat et quis\",\n      \"dosage\": \"dolor adipisicing\",\n      \"frequency\": \"mollit velit dolor Lorem\"\n    },\n    {\n      \"name\": \"ipsum in adipisicing\",\n      \"dosage\": \"incididunt sit voluptate minim \",\n      \"frequency\": \"proident aliqua exercitation \"\n    }\n  ],\n  \"cost\": 18406383.9402121,\n  \"followUpDate\": \"2013-04-03\",\n  \"notes\": \"anim Duis voluptate mollit\",\n  \"attachments\": [\n    \"https://bKahSMMNSOQgLpRmXJF.oxkcEeS7.0Q8vXMAlpynh6qgm+64nCtdh8d2yC8kn714u437mCCYsH0odia+48Xcuu-7NS\",\n    \"https://CnwvvTckTBVAeYEnrxpaASZ.jiZClljK9AbBSmfwQGYes2i2RCxUxxslPhLc9\"\n  ]\n}",
+                "uid": "33439397-ca4f7f82-ec35-4cf8-b09d-c3bb96ab6d21"
+              },
+              {
+                "id": "874e04f4-c2d7-4f15-b511-5f9cac7b67d0",
+                "name": "Invalid input data",
+                "originalRequest": {
+                  "method": "POST",
+                  "header": [
+                    {
+                      "key": "Accept",
+                      "value": "application/json"
+                    }
+                  ],
+                  "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"dogId\": \"228b0cc2-b391-7560-ff7f-0c0fa1e1b013\",\n  \"type\": \"grooming\",\n  \"date\": \"1984-04-16\",\n  \"veterinarian\": \"laboris eiusmod Duis est\",\n  \"clinic\": \"mollit\",\n  \"description\": \"aliquip Excepteur dolor dolore\",\n  \"medications\": [\n    {\n      \"name\": \"deserunt\",\n      \"dosage\": \"enim ut Ut eu\",\n      \"frequency\": \"cupidatat fugiat esse\"\n    },\n    {\n      \"name\": \"esse nisi ut ex\",\n      \"dosage\": \"culpa laboris Lorem\",\n      \"frequency\": \"voluptate adipisicing\"\n    }\n  ],\n  \"cost\": 24812486.615993112,\n  \"followUpDate\": \"1967-09-20\",\n  \"notes\": \"ullamco nisi\",\n  \"attachments\": [\n    \"https://fgijpaNsSsnsXJDNpbG.tdwXDbpeg5Qb2AZ.o4,BoR9TASm5yfaK0WsC5.U0yhhwK3db2fCdhRidvfFIWedlc\",\n    \"https://YGVhgo.ltrlin1qEQKl5qNkZfnisY1ZB5WBrpPuCZ1nV\"\n  ]\n}",
+                    "options": {
+                      "raw": {
+                        "language": "json"
+                      }
+                    }
+                  },
+                  "url": {
+                    "raw": "{{baseUrl}}/health/records",
+                    "host": [
+                      "{{baseUrl}}"
+                    ],
+                    "path": [
+                      "health",
+                      "records"
+                    ]
+                  }
+                },
+                "status": "Bad Request",
+                "code": 400,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "{\n  \"error\": \"labore\",\n  \"message\": \"occae\",\n  \"details\": {}\n}",
+                "uid": "33439397-874e04f4-c2d7-4f15-b511-5f9cac7b67d0"
+              },
+              {
+                "id": "2f7d270f-99d7-4c94-89ab-d054dbfd71c9",
+                "name": "Dog not found",
+                "originalRequest": {
+                  "method": "POST",
+                  "header": [
+                    {
+                      "key": "Accept",
+                      "value": "application/json"
+                    }
+                  ],
+                  "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"dogId\": \"228b0cc2-b391-7560-ff7f-0c0fa1e1b013\",\n  \"type\": \"grooming\",\n  \"date\": \"1984-04-16\",\n  \"veterinarian\": \"laboris eiusmod Duis est\",\n  \"clinic\": \"mollit\",\n  \"description\": \"aliquip Excepteur dolor dolore\",\n  \"medications\": [\n    {\n      \"name\": \"deserunt\",\n      \"dosage\": \"enim ut Ut eu\",\n      \"frequency\": \"cupidatat fugiat esse\"\n    },\n    {\n      \"name\": \"esse nisi ut ex\",\n      \"dosage\": \"culpa laboris Lorem\",\n      \"frequency\": \"voluptate adipisicing\"\n    }\n  ],\n  \"cost\": 24812486.615993112,\n  \"followUpDate\": \"1967-09-20\",\n  \"notes\": \"ullamco nisi\",\n  \"attachments\": [\n    \"https://fgijpaNsSsnsXJDNpbG.tdwXDbpeg5Qb2AZ.o4,BoR9TASm5yfaK0WsC5.U0yhhwK3db2fCdhRidvfFIWedlc\",\n    \"https://YGVhgo.ltrlin1qEQKl5qNkZfnisY1ZB5WBrpPuCZ1nV\"\n  ]\n}",
+                    "options": {
+                      "raw": {
+                        "language": "json"
+                      }
+                    }
+                  },
+                  "url": {
+                    "raw": "{{baseUrl}}/health/records",
+                    "host": [
+                      "{{baseUrl}}"
+                    ],
+                    "path": [
+                      "health",
+                      "records"
+                    ]
+                  }
+                },
+                "status": "Not Found",
+                "code": 404,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "{\n  \"error\": \"labore\",\n  \"message\": \"occae\",\n  \"details\": {}\n}",
+                "uid": "33439397-2f7d270f-99d7-4c94-89ab-d054dbfd71c9"
+              }
+            ],
+            "uid": "33439397-5ff89e65-89c3-49f6-a3d2-af38f31e0161"
+          },
+          {
+            "name": "Get health record",
+            "id": "fbaf0c34-7e13-475b-b4fa-99652e8269f3",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "GET",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                }
+              ],
+              "url": {
+                "raw": "{{baseUrl}}/health/records/:id",
+                "host": [
+                  "{{baseUrl}}"
+                ],
+                "path": [
+                  "health",
+                  "records",
+                  ":id"
+                ],
+                "variable": [
+                  {
+                    "id": "14073fdc-44df-4771-a442-3fa1d77702c8",
+                    "key": "id",
+                    "value": "urn:uuid:a066e792-11a6-c020-59e3-13c78d97415f",
+                    "description": "(Required) "
+                  }
+                ]
+              },
+              "description": "Retrieve a specific health record by ID"
+            },
+            "response": [
+              {
+                "id": "8ae6fd85-7601-4423-ae30-6b57c918f729",
+                "name": "Health record details",
+                "originalRequest": {
+                  "method": "GET",
+                  "header": [
+                    {
+                      "key": "Accept",
+                      "value": "application/json"
+                    }
+                  ],
+                  "url": {
+                    "raw": "{{baseUrl}}/health/records/:id",
+                    "host": [
+                      "{{baseUrl}}"
+                    ],
+                    "path": [
+                      "health",
+                      "records",
+                      ":id"
+                    ],
+                    "variable": [
+                      {
+                        "key": "id",
+                        "value": "urn:uuid:a066e792-11a6-c020-59e3-13c78d97415f",
+                        "description": "(Required) "
+                      }
+                    ]
+                  }
+                },
+                "status": "OK",
+                "code": 200,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "{\n  \"id\": \"urn:uuid:8bcb1c6e-d887-a5f2-fc3a-80286919b806\",\n  \"dogId\": \"fd6f905f-3009-993a-56d6-65d64e86e3ed\",\n  \"type\": \"treatment\",\n  \"date\": \"1998-12-06\",\n  \"veterinarian\": \"dolore dolore\",\n  \"clinic\": \"fugiat et \",\n  \"description\": \"eiusmod cillum sint\",\n  \"createdAt\": \"2010-04-01T00:06:56.214Z\",\n  \"updatedAt\": \"1981-02-04T17:37:18.501Z\",\n  \"medications\": [\n    {\n      \"name\": \"fugiat et quis\",\n      \"dosage\": \"dolor adipisicing\",\n      \"frequency\": \"mollit velit dolor Lorem\"\n    },\n    {\n      \"name\": \"ipsum in adipisicing\",\n      \"dosage\": \"incididunt sit voluptate minim \",\n      \"frequency\": \"proident aliqua exercitation \"\n    }\n  ],\n  \"cost\": 18406383.9402121,\n  \"followUpDate\": \"2013-04-03\",\n  \"notes\": \"anim Duis voluptate mollit\",\n  \"attachments\": [\n    \"https://bKahSMMNSOQgLpRmXJF.oxkcEeS7.0Q8vXMAlpynh6qgm+64nCtdh8d2yC8kn714u437mCCYsH0odia+48Xcuu-7NS\",\n    \"https://CnwvvTckTBVAeYEnrxpaASZ.jiZClljK9AbBSmfwQGYes2i2RCxUxxslPhLc9\"\n  ]\n}",
+                "uid": "33439397-8ae6fd85-7601-4423-ae30-6b57c918f729"
+              },
+              {
+                "id": "28d6c4b9-296e-4a42-9b9b-c5abed10850a",
+                "name": "Health record not found",
+                "originalRequest": {
+                  "method": "GET",
+                  "header": [
+                    {
+                      "key": "Accept",
+                      "value": "application/json"
+                    }
+                  ],
+                  "url": {
+                    "raw": "{{baseUrl}}/health/records/:id",
+                    "host": [
+                      "{{baseUrl}}"
+                    ],
+                    "path": [
+                      "health",
+                      "records",
+                      ":id"
+                    ],
+                    "variable": [
+                      {
+                        "key": "id",
+                        "value": "urn:uuid:a066e792-11a6-c020-59e3-13c78d97415f",
+                        "description": "(Required) "
+                      }
+                    ]
+                  }
+                },
+                "status": "Not Found",
+                "code": 404,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "{\n  \"error\": \"labore\",\n  \"message\": \"occae\",\n  \"details\": {}\n}",
+                "uid": "33439397-28d6c4b9-296e-4a42-9b9b-c5abed10850a"
+              }
+            ],
+            "uid": "33439397-fbaf0c34-7e13-475b-b4fa-99652e8269f3"
+          },
+          {
+            "name": "Get dog vaccination history",
+            "id": "4c905eae-b9a9-4097-8ddc-e8a9479aa748",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "GET",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                }
+              ],
+              "url": {
+                "raw": "{{baseUrl}}/health/dogs/:dogId/vaccination-history",
+                "host": [
+                  "{{baseUrl}}"
+                ],
+                "path": [
+                  "health",
+                  "dogs",
+                  ":dogId",
+                  "vaccination-history"
+                ],
+                "variable": [
+                  {
+                    "id": "066c37a3-5e39-4eb4-8bcb-8552ee1711a2",
+                    "key": "dogId",
+                    "value": "urn:uuid:a066e792-11a6-c020-59e3-13c78d97415f",
+                    "description": "(Required) "
+                  }
+                ]
+              },
+              "description": "Retrieve vaccination history for a specific dog"
+            },
+            "response": [
+              {
+                "id": "1af31dfa-1bfb-42db-b56e-707073854b67",
+                "name": "Dog vaccination history",
+                "originalRequest": {
+                  "method": "GET",
+                  "header": [
+                    {
+                      "key": "Accept",
+                      "value": "application/json"
+                    }
+                  ],
+                  "url": {
+                    "raw": "{{baseUrl}}/health/dogs/:dogId/vaccination-history",
+                    "host": [
+                      "{{baseUrl}}"
+                    ],
+                    "path": [
+                      "health",
+                      "dogs",
+                      ":dogId",
+                      "vaccination-history"
+                    ],
+                    "variable": [
+                      {
+                        "key": "dogId",
+                        "value": "urn:uuid:a066e792-11a6-c020-59e3-13c78d97415f",
+                        "description": "(Required) "
+                      }
+                    ]
+                  }
+                },
+                "status": "OK",
+                "code": 200,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "{\n  \"dogId\": \"urn:uuid:41b12c99-f8f9-7ef9-0a39-78b0227fb56c\",\n  \"vaccinations\": [\n    {\n      \"id\": \"bc8c28b1-2533-fb03-ee28-f6a78e5e0bfb\",\n      \"dogId\": \"71ec082e-c170-8b50-898d-5041a90aa4a1\",\n      \"type\": \"checkup\",\n      \"date\": \"1953-07-03\",\n      \"veterinarian\": \"est ea Ut esse quis\",\n      \"clinic\": \"officia exer\",\n      \"description\": \"dolor enim irure ad\",\n      \"createdAt\": \"2017-01-21T20:14:07.395Z\",\n      \"updatedAt\": \"2012-12-22T15:25:00.407Z\",\n      \"medications\": [\n        {\n          \"name\": \"sint\",\n          \"dosage\": \"aute elit nisi id\",\n          \"frequency\": \"do cillum de\"\n        },\n        {\n          \"name\": \"voluptate dolore aliqua tempor\",\n          \"dosage\": \"voluptate velit nostrud adipisici\",\n          \"frequency\": \"officia nulla\"\n        }\n      ],\n      \"cost\": 99744704.18319176,\n      \"followUpDate\": \"1946-02-10\",\n      \"notes\": \"aliqua reprehenderit velit Duis\",\n      \"attachments\": [\n        \"http://VFIBYSUlwQM.eykL.oRU4T1CYmYT7.i.akI4eNg\",\n        \"https://QOLz.mukXyq5AHAc9quAP0GElvuGn\"\n      ]\n    },\n    {\n      \"id\": \"4de1c710-5f48-e761-604d-ad870bbe6b48\",\n      \"dogId\": \"urn:uuid:6609d5b4-481a-1c8a-37c7-50067d99f9b6\",\n      \"type\": \"checkup\",\n      \"date\": \"1989-11-20\",\n      \"veterinarian\": \"consectetur ut ut est\",\n      \"clinic\": \"reprehenderit pariatur Duis magna quis\",\n      \"description\": \"dolor aute\",\n      \"createdAt\": \"1987-04-02T23:09:22.311Z\",\n      \"updatedAt\": \"1980-09-02T04:54:32.054Z\",\n      \"medications\": [\n        {\n          \"name\": \"non\",\n          \"dosage\": \"repreh\",\n          \"frequency\": \"id labore sed fugiat irure\"\n        },\n        {\n          \"name\": \"Ut\",\n          \"dosage\": \"fugiat\",\n          \"frequency\": \"consequat deserunt in\"\n        }\n      ],\n      \"cost\": 56932801.24588127,\n      \"followUpDate\": \"1980-05-10\",\n      \"notes\": \"in aliquip esse aute\",\n      \"attachments\": [\n        \"https://kHAJMLzAxxHZBGlmFB.chjsUFMTaj2Qnzw.Z4QVnOWKgOPIqLS-f2GxC,9prro4Pos9ERP7BfHx\",\n        \"http://LNhcrMKsOVsotaTKlyYcWZ.aqroutWI63+gdS8FKCOtorSp0SLvSunM\"\n      ]\n    }\n  ],\n  \"upToDate\": false,\n  \"nextDue\": \"1952-10-25\"\n}",
+                "uid": "33439397-1af31dfa-1bfb-42db-b56e-707073854b67"
+              },
+              {
+                "id": "1ac77693-eb46-49a0-8f81-b4f0564446a0",
+                "name": "Dog not found",
+                "originalRequest": {
+                  "method": "GET",
+                  "header": [
+                    {
+                      "key": "Accept",
+                      "value": "application/json"
+                    }
+                  ],
+                  "url": {
+                    "raw": "{{baseUrl}}/health/dogs/:dogId/vaccination-history",
+                    "host": [
+                      "{{baseUrl}}"
+                    ],
+                    "path": [
+                      "health",
+                      "dogs",
+                      ":dogId",
+                      "vaccination-history"
+                    ],
+                    "variable": [
+                      {
+                        "key": "dogId",
+                        "value": "urn:uuid:a066e792-11a6-c020-59e3-13c78d97415f",
+                        "description": "(Required) "
+                      }
+                    ]
+                  }
+                },
+                "status": "Not Found",
+                "code": 404,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "{\n  \"error\": \"labore\",\n  \"message\": \"occae\",\n  \"details\": {}\n}",
+                "uid": "33439397-1ac77693-eb46-49a0-8f81-b4f0564446a0"
+              }
+            ],
+            "uid": "33439397-4c905eae-b9a9-4097-8ddc-e8a9479aa748"
+          },
+          {
+            "name": "Get veterinarians",
+            "id": "b816dd91-5fb6-4654-b0af-98c5f8e7465d",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "GET",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                }
+              ],
+              "url": {
+                "raw": "{{baseUrl}}/health/veterinarians",
+                "host": [
+                  "{{baseUrl}}"
+                ],
+                "path": [
+                  "health",
+                  "veterinarians"
+                ]
+              },
+              "description": "Retrieve a list of veterinarians and their clinics from health records"
+            },
+            "response": [
+              {
+                "id": "de6291fe-53e9-48f8-9c37-ec0c068c9d98",
+                "name": "List of veterinarians",
+                "originalRequest": {
+                  "method": "GET",
+                  "header": [
+                    {
+                      "key": "Accept",
+                      "value": "application/json"
+                    }
+                  ],
+                  "url": {
+                    "raw": "{{baseUrl}}/health/veterinarians",
+                    "host": [
+                      "{{baseUrl}}"
+                    ],
+                    "path": [
+                      "health",
+                      "veterinarians"
+                    ]
+                  }
+                },
+                "status": "OK",
+                "code": 200,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "{\n  \"veterinarians\": [\n    {\n      \"name\": \"qui\",\n      \"clinic\": \"mollit\",\n      \"recordCount\": 54653023,\n      \"specialties\": [\n        \"sunt do\",\n        \"consequat aliqua\"\n      ]\n    },\n    {\n      \"name\": \"nisi\",\n      \"clinic\": \"irure ut\",\n      \"recordCount\": -78371356,\n      \"specialties\": [\n        \"esse ea in\",\n        \"occaecat adipisicing minim\"\n      ]\n    }\n  ]\n}",
+                "uid": "33439397-de6291fe-53e9-48f8-9c37-ec0c068c9d98"
+              }
+            ],
+            "uid": "33439397-b816dd91-5fb6-4654-b0af-98c5f8e7465d"
+          }
+        ],
+        "id": "6e295388-bc75-432b-bd85-6c524240d8c5",
+        "uid": "33439397-6e295388-bc75-432b-bd85-6c524240d8c5"
+      },
+      {
+        "name": "Training",
+        "item": [
+          {
+            "name": "List training records",
+            "id": "6f3efa43-5ebb-483f-b803-3ee05af8029a",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "GET",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                }
+              ],
+              "url": {
+                "raw": "{{baseUrl}}/training/records?dogId=urn:uuid:a066e792-11a6-c020-59e3-13c78d97415f&type=agility&trainer=in minim cillum ea ex&status=discontinued&progress=fair&page=1&limit=10",
+                "host": [
+                  "{{baseUrl}}"
+                ],
+                "path": [
+                  "training",
+                  "records"
+                ],
+                "query": [
+                  {
+                    "key": "dogId",
+                    "value": "urn:uuid:a066e792-11a6-c020-59e3-13c78d97415f"
+                  },
+                  {
+                    "key": "type",
+                    "value": "agility"
+                  },
+                  {
+                    "key": "trainer",
+                    "value": "in minim cillum ea ex"
+                  },
+                  {
+                    "key": "status",
+                    "value": "discontinued"
+                  },
+                  {
+                    "key": "progress",
+                    "value": "fair"
+                  },
+                  {
+                    "key": "page",
+                    "value": "1"
+                  },
+                  {
+                    "key": "limit",
+                    "value": "10"
+                  }
+                ]
+              },
+              "description": "Retrieve training records with optional filtering"
+            },
+            "response": [
+              {
+                "id": "69e94076-d4bf-494d-96d5-44855a8c18bc",
+                "name": "List of training records",
+                "originalRequest": {
+                  "method": "GET",
+                  "header": [
+                    {
+                      "key": "Accept",
+                      "value": "application/json"
+                    }
+                  ],
+                  "url": {
+                    "raw": "{{baseUrl}}/training/records?dogId=urn:uuid:a066e792-11a6-c020-59e3-13c78d97415f&type=agility&trainer=in minim cillum ea ex&status=discontinued&progress=fair&page=1&limit=10",
+                    "host": [
+                      "{{baseUrl}}"
+                    ],
+                    "path": [
+                      "training",
+                      "records"
+                    ],
+                    "query": [
+                      {
+                        "key": "dogId",
+                        "value": "urn:uuid:a066e792-11a6-c020-59e3-13c78d97415f"
+                      },
+                      {
+                        "key": "type",
+                        "value": "agility"
+                      },
+                      {
+                        "key": "trainer",
+                        "value": "in minim cillum ea ex"
+                      },
+                      {
+                        "key": "status",
+                        "value": "discontinued"
+                      },
+                      {
+                        "key": "progress",
+                        "value": "fair"
+                      },
+                      {
+                        "key": "page",
+                        "value": "1"
+                      },
+                      {
+                        "key": "limit",
+                        "value": "10"
+                      }
+                    ]
+                  }
+                },
+                "status": "OK",
+                "code": 200,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "{\n  \"data\": [\n    {\n      \"id\": \"0289ea31-1c2c-6cf0-3a09-2544b3315f48\",\n      \"dogId\": \"92f6903f-0d7b-6113-2cee-e83ff14108d0\",\n      \"type\": \"basic-obedience\",\n      \"trainer\": \"ad sed commodo\",\n      \"startDate\": \"1962-05-19\",\n      \"status\": \"completed\",\n      \"skills\": [\n        \"dolore ipsum nostrud magna\",\n        \"sed cupidatat ea ex\"\n      ],\n      \"progress\": \"fair\",\n      \"createdAt\": \"1967-05-11T15:22:05.840Z\",\n      \"updatedAt\": \"1947-04-09T00:32:57.107Z\",\n      \"facility\": \"mollit\",\n      \"endDate\": \"2001-12-02\",\n      \"cost\": 26391523.24882137,\n      \"notes\": \"nulla mollit ad\",\n      \"certificates\": [\n        \"https://YvSJ.tdslX\",\n        \"https://OkHYlcfxDOPweLIzl.jqYP2ufZxfgJqqv4qRb9idfbI+us79gBaY3NwH99nT.P7nVp\"\n      ]\n    },\n    {\n      \"id\": \"fb9d3881-95bf-6394-250b-a697763db17b\",\n      \"dogId\": \"9bee9927-82cb-1aa6-711a-375423602ab3\",\n      \"type\": \"socialization\",\n      \"trainer\": \"sit incididunt consequat magna\",\n      \"startDate\": \"1989-09-29\",\n      \"status\": \"discontinued\",\n      \"skills\": [\n        \"enim mollit qui\",\n        \"dolor nostrud dolor Ut\"\n      ],\n      \"progress\": \"poor\",\n      \"createdAt\": \"1954-03-11T14:24:22.157Z\",\n      \"updatedAt\": \"2015-05-09T12:43:15.011Z\",\n      \"facility\": \"sed dolore magna minim\",\n      \"endDate\": \"2019-08-11\",\n      \"cost\": 89097546.23813306,\n      \"notes\": \"nostrud ea in\",\n      \"certificates\": [\n        \"http://dKJuGcOGENrdyfxh.tfgsZaXO0fiTSnPpKoo5lMuaaobXT2ZlJUVksjBgdEn-8HZ9FKOhcfR2\",\n        \"http://NrOPXylOQZqgybFSmIHywYtm.tkoTZ5P-STxRiOXMxDAq.ki9pST4F8wpIOrHBcQuR\"\n      ]\n    }\n  ],\n  \"pagination\": {\n    \"page\": -78041534,\n    \"limit\": 74866129,\n    \"total\": -49442589,\n    \"totalPages\": -17477666\n  }\n}",
+                "uid": "33439397-69e94076-d4bf-494d-96d5-44855a8c18bc"
+              }
+            ],
+            "uid": "33439397-6f3efa43-5ebb-483f-b803-3ee05af8029a"
+          },
+          {
+            "name": "Create training record",
+            "id": "f694f2ce-9c5b-4eb9-90aa-4ed69d5dee2c",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "POST",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n  \"dogId\": \"677a8a88-7f72-1494-e5ec-afded06b0be4\",\n  \"type\": \"therapy\",\n  \"trainer\": \"Duis deserunt aute exercitation\",\n  \"startDate\": \"1949-03-28\",\n  \"status\": \"discontinued\",\n  \"skills\": [\n    \"et tempor cupidatat\",\n    \"anim minim et ullamco\"\n  ],\n  \"progress\": \"good\",\n  \"facility\": \"velit\",\n  \"endDate\": \"2006-08-07\",\n  \"cost\": 92308884.95605342,\n  \"notes\": \"dolor ea eu sit\",\n  \"certificates\": [\n    \"http://kynrbmcNlAStWAKxJAD.fqucJ157QdiGiJNKhKgTHx5DGIG8L+1F\",\n    \"http://NAgiFyPfOxQ.vmmqbeKq+2SRUbQrkgT34HkEDIuDCdkSqA48jOt\"\n  ]\n}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              },
+              "url": {
+                "raw": "{{baseUrl}}/training/records",
+                "host": [
+                  "{{baseUrl}}"
+                ],
+                "path": [
+                  "training",
+                  "records"
+                ]
+              },
+              "description": "Add a new training record for a dog"
+            },
+            "response": [
+              {
+                "id": "c2053d2a-847e-400f-b8d6-491aa22c91e1",
+                "name": "Training record created successfully",
+                "originalRequest": {
+                  "method": "POST",
+                  "header": [
+                    {
+                      "key": "Accept",
+                      "value": "application/json"
+                    }
+                  ],
+                  "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"dogId\": \"677a8a88-7f72-1494-e5ec-afded06b0be4\",\n  \"type\": \"therapy\",\n  \"trainer\": \"Duis deserunt aute exercitation\",\n  \"startDate\": \"1949-03-28\",\n  \"status\": \"discontinued\",\n  \"skills\": [\n    \"et tempor cupidatat\",\n    \"anim minim et ullamco\"\n  ],\n  \"progress\": \"good\",\n  \"facility\": \"velit\",\n  \"endDate\": \"2006-08-07\",\n  \"cost\": 92308884.95605342,\n  \"notes\": \"dolor ea eu sit\",\n  \"certificates\": [\n    \"http://kynrbmcNlAStWAKxJAD.fqucJ157QdiGiJNKhKgTHx5DGIG8L+1F\",\n    \"http://NAgiFyPfOxQ.vmmqbeKq+2SRUbQrkgT34HkEDIuDCdkSqA48jOt\"\n  ]\n}",
+                    "options": {
+                      "raw": {
+                        "language": "json"
+                      }
+                    }
+                  },
+                  "url": {
+                    "raw": "{{baseUrl}}/training/records",
+                    "host": [
+                      "{{baseUrl}}"
+                    ],
+                    "path": [
+                      "training",
+                      "records"
+                    ]
+                  }
+                },
+                "status": "Created",
+                "code": 201,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "{\n  \"id\": \"urn:uuid:635d28d6-7141-3990-133e-17231f8abdcd\",\n  \"dogId\": \"urn:uuid:b081ecf9-3dc5-3250-498a-9961c44177bb\",\n  \"type\": \"advanced-obedience\",\n  \"trainer\": \"incididunt aliquip\",\n  \"startDate\": \"1997-06-16\",\n  \"status\": \"discontinued\",\n  \"skills\": [\n    \"adipisicing sint\",\n    \"deserun\"\n  ],\n  \"progress\": \"excellent\",\n  \"createdAt\": \"2015-03-11T04:02:17.587Z\",\n  \"updatedAt\": \"2015-02-06T01:13:33.306Z\",\n  \"facility\": \"sunt dolor\",\n  \"endDate\": \"1956-09-02\",\n  \"cost\": 98613584.95389436,\n  \"notes\": \"pariatur in nostrud\",\n  \"certificates\": [\n    \"https://KqvIaennDZnRtcWyNkVgFobpE.okaCtb3yFbnoR7HuVicOF7foX\",\n    \"https://TFemSDaBJuZviYVdfqaGQRmf.dboY4bi.3zLNtBf25r4W85aATH0cXdQylvY5do39f\"\n  ]\n}",
+                "uid": "33439397-c2053d2a-847e-400f-b8d6-491aa22c91e1"
+              },
+              {
+                "id": "faac7065-8c04-48cc-aac0-cbe55a0a6d5c",
+                "name": "Invalid input data",
+                "originalRequest": {
+                  "method": "POST",
+                  "header": [
+                    {
+                      "key": "Accept",
+                      "value": "application/json"
+                    }
+                  ],
+                  "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"dogId\": \"677a8a88-7f72-1494-e5ec-afded06b0be4\",\n  \"type\": \"therapy\",\n  \"trainer\": \"Duis deserunt aute exercitation\",\n  \"startDate\": \"1949-03-28\",\n  \"status\": \"discontinued\",\n  \"skills\": [\n    \"et tempor cupidatat\",\n    \"anim minim et ullamco\"\n  ],\n  \"progress\": \"good\",\n  \"facility\": \"velit\",\n  \"endDate\": \"2006-08-07\",\n  \"cost\": 92308884.95605342,\n  \"notes\": \"dolor ea eu sit\",\n  \"certificates\": [\n    \"http://kynrbmcNlAStWAKxJAD.fqucJ157QdiGiJNKhKgTHx5DGIG8L+1F\",\n    \"http://NAgiFyPfOxQ.vmmqbeKq+2SRUbQrkgT34HkEDIuDCdkSqA48jOt\"\n  ]\n}",
+                    "options": {
+                      "raw": {
+                        "language": "json"
+                      }
+                    }
+                  },
+                  "url": {
+                    "raw": "{{baseUrl}}/training/records",
+                    "host": [
+                      "{{baseUrl}}"
+                    ],
+                    "path": [
+                      "training",
+                      "records"
+                    ]
+                  }
+                },
+                "status": "Bad Request",
+                "code": 400,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "{\n  \"error\": \"labore\",\n  \"message\": \"occae\",\n  \"details\": {}\n}",
+                "uid": "33439397-faac7065-8c04-48cc-aac0-cbe55a0a6d5c"
+              },
+              {
+                "id": "b2857b55-f6d0-43c1-9cfc-36fb8efaab63",
+                "name": "Dog not found",
+                "originalRequest": {
+                  "method": "POST",
+                  "header": [
+                    {
+                      "key": "Accept",
+                      "value": "application/json"
+                    }
+                  ],
+                  "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"dogId\": \"677a8a88-7f72-1494-e5ec-afded06b0be4\",\n  \"type\": \"therapy\",\n  \"trainer\": \"Duis deserunt aute exercitation\",\n  \"startDate\": \"1949-03-28\",\n  \"status\": \"discontinued\",\n  \"skills\": [\n    \"et tempor cupidatat\",\n    \"anim minim et ullamco\"\n  ],\n  \"progress\": \"good\",\n  \"facility\": \"velit\",\n  \"endDate\": \"2006-08-07\",\n  \"cost\": 92308884.95605342,\n  \"notes\": \"dolor ea eu sit\",\n  \"certificates\": [\n    \"http://kynrbmcNlAStWAKxJAD.fqucJ157QdiGiJNKhKgTHx5DGIG8L+1F\",\n    \"http://NAgiFyPfOxQ.vmmqbeKq+2SRUbQrkgT34HkEDIuDCdkSqA48jOt\"\n  ]\n}",
+                    "options": {
+                      "raw": {
+                        "language": "json"
+                      }
+                    }
+                  },
+                  "url": {
+                    "raw": "{{baseUrl}}/training/records",
+                    "host": [
+                      "{{baseUrl}}"
+                    ],
+                    "path": [
+                      "training",
+                      "records"
+                    ]
+                  }
+                },
+                "status": "Not Found",
+                "code": 404,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "{\n  \"error\": \"labore\",\n  \"message\": \"occae\",\n  \"details\": {}\n}",
+                "uid": "33439397-b2857b55-f6d0-43c1-9cfc-36fb8efaab63"
+              }
+            ],
+            "uid": "33439397-f694f2ce-9c5b-4eb9-90aa-4ed69d5dee2c"
+          },
+          {
+            "name": "Get training record",
+            "id": "456fbc77-18e2-49e1-951e-9b31624e46d1",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "GET",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                }
+              ],
+              "url": {
+                "raw": "{{baseUrl}}/training/records/:id",
+                "host": [
+                  "{{baseUrl}}"
+                ],
+                "path": [
+                  "training",
+                  "records",
+                  ":id"
+                ],
+                "variable": [
+                  {
+                    "id": "cafd0256-021f-49a4-a3ff-baf1d9c01730",
+                    "key": "id",
+                    "value": "urn:uuid:a066e792-11a6-c020-59e3-13c78d97415f",
+                    "description": "(Required) "
+                  }
+                ]
+              },
+              "description": "Retrieve a specific training record by ID"
+            },
+            "response": [
+              {
+                "id": "f372d1f1-73b0-4b77-a145-65640154248b",
+                "name": "Training record details",
+                "originalRequest": {
+                  "method": "GET",
+                  "header": [
+                    {
+                      "key": "Accept",
+                      "value": "application/json"
+                    }
+                  ],
+                  "url": {
+                    "raw": "{{baseUrl}}/training/records/:id",
+                    "host": [
+                      "{{baseUrl}}"
+                    ],
+                    "path": [
+                      "training",
+                      "records",
+                      ":id"
+                    ],
+                    "variable": [
+                      {
+                        "key": "id",
+                        "value": "urn:uuid:a066e792-11a6-c020-59e3-13c78d97415f",
+                        "description": "(Required) "
+                      }
+                    ]
+                  }
+                },
+                "status": "OK",
+                "code": 200,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "{\n  \"id\": \"urn:uuid:635d28d6-7141-3990-133e-17231f8abdcd\",\n  \"dogId\": \"urn:uuid:b081ecf9-3dc5-3250-498a-9961c44177bb\",\n  \"type\": \"advanced-obedience\",\n  \"trainer\": \"incididunt aliquip\",\n  \"startDate\": \"1997-06-16\",\n  \"status\": \"discontinued\",\n  \"skills\": [\n    \"adipisicing sint\",\n    \"deserun\"\n  ],\n  \"progress\": \"excellent\",\n  \"createdAt\": \"2015-03-11T04:02:17.587Z\",\n  \"updatedAt\": \"2015-02-06T01:13:33.306Z\",\n  \"facility\": \"sunt dolor\",\n  \"endDate\": \"1956-09-02\",\n  \"cost\": 98613584.95389436,\n  \"notes\": \"pariatur in nostrud\",\n  \"certificates\": [\n    \"https://KqvIaennDZnRtcWyNkVgFobpE.okaCtb3yFbnoR7HuVicOF7foX\",\n    \"https://TFemSDaBJuZviYVdfqaGQRmf.dboY4bi.3zLNtBf25r4W85aATH0cXdQylvY5do39f\"\n  ]\n}",
+                "uid": "33439397-f372d1f1-73b0-4b77-a145-65640154248b"
+              },
+              {
+                "id": "4143a682-1fa7-4b1a-a040-61f2c999f189",
+                "name": "Training record not found",
+                "originalRequest": {
+                  "method": "GET",
+                  "header": [
+                    {
+                      "key": "Accept",
+                      "value": "application/json"
+                    }
+                  ],
+                  "url": {
+                    "raw": "{{baseUrl}}/training/records/:id",
+                    "host": [
+                      "{{baseUrl}}"
+                    ],
+                    "path": [
+                      "training",
+                      "records",
+                      ":id"
+                    ],
+                    "variable": [
+                      {
+                        "key": "id",
+                        "value": "urn:uuid:a066e792-11a6-c020-59e3-13c78d97415f",
+                        "description": "(Required) "
+                      }
+                    ]
+                  }
+                },
+                "status": "Not Found",
+                "code": 404,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "{\n  \"error\": \"labore\",\n  \"message\": \"occae\",\n  \"details\": {}\n}",
+                "uid": "33439397-4143a682-1fa7-4b1a-a040-61f2c999f189"
+              }
+            ],
+            "uid": "33439397-456fbc77-18e2-49e1-951e-9b31624e46d1"
+          },
+          {
+            "name": "Update training record",
+            "id": "27673529-bc63-4356-ad3a-65600e6f59ed",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "PUT",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n  \"status\": \"in-progress\",\n  \"progress\": \"poor\",\n  \"endDate\": \"2018-10-14\",\n  \"skills\": [\n    \"ex Lorem\",\n    \"eiusmod ut nulla irure\"\n  ],\n  \"notes\": \"in deserunt adipisicing magna ut\",\n  \"certificates\": [\n    \"http://rVAeJocYzidhPh.ecqhYmdLv,o5nbKuB,l8CcY0cfc\",\n    \"https://eNqjwIYkXCnXzHbcrPeLBiR.wrtOVsQN,2.Q8ftlx24JBRBDAd,qR\"\n  ]\n}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              },
+              "url": {
+                "raw": "{{baseUrl}}/training/records/:id",
+                "host": [
+                  "{{baseUrl}}"
+                ],
+                "path": [
+                  "training",
+                  "records",
+                  ":id"
+                ],
+                "variable": [
+                  {
+                    "id": "703879fd-bc95-406e-9447-6c59daff1149",
+                    "key": "id",
+                    "value": "urn:uuid:a066e792-11a6-c020-59e3-13c78d97415f",
+                    "description": "(Required) "
+                  }
+                ]
+              },
+              "description": "Update an existing training record"
+            },
+            "response": [
+              {
+                "id": "c5bbe9d1-bb64-4737-9bb8-10731e6fe245",
+                "name": "Training record updated successfully",
+                "originalRequest": {
+                  "method": "PUT",
+                  "header": [
+                    {
+                      "key": "Accept",
+                      "value": "application/json"
+                    }
+                  ],
+                  "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"status\": \"in-progress\",\n  \"progress\": \"poor\",\n  \"endDate\": \"2018-10-14\",\n  \"skills\": [\n    \"ex Lorem\",\n    \"eiusmod ut nulla irure\"\n  ],\n  \"notes\": \"in deserunt adipisicing magna ut\",\n  \"certificates\": [\n    \"http://rVAeJocYzidhPh.ecqhYmdLv,o5nbKuB,l8CcY0cfc\",\n    \"https://eNqjwIYkXCnXzHbcrPeLBiR.wrtOVsQN,2.Q8ftlx24JBRBDAd,qR\"\n  ]\n}",
+                    "options": {
+                      "raw": {
+                        "language": "json"
+                      }
+                    }
+                  },
+                  "url": {
+                    "raw": "{{baseUrl}}/training/records/:id",
+                    "host": [
+                      "{{baseUrl}}"
+                    ],
+                    "path": [
+                      "training",
+                      "records",
+                      ":id"
+                    ],
+                    "variable": [
+                      {
+                        "key": "id",
+                        "value": "urn:uuid:a066e792-11a6-c020-59e3-13c78d97415f",
+                        "description": "(Required) "
+                      }
+                    ]
+                  }
+                },
+                "status": "OK",
+                "code": 200,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "{\n  \"id\": \"urn:uuid:635d28d6-7141-3990-133e-17231f8abdcd\",\n  \"dogId\": \"urn:uuid:b081ecf9-3dc5-3250-498a-9961c44177bb\",\n  \"type\": \"advanced-obedience\",\n  \"trainer\": \"incididunt aliquip\",\n  \"startDate\": \"1997-06-16\",\n  \"status\": \"discontinued\",\n  \"skills\": [\n    \"adipisicing sint\",\n    \"deserun\"\n  ],\n  \"progress\": \"excellent\",\n  \"createdAt\": \"2015-03-11T04:02:17.587Z\",\n  \"updatedAt\": \"2015-02-06T01:13:33.306Z\",\n  \"facility\": \"sunt dolor\",\n  \"endDate\": \"1956-09-02\",\n  \"cost\": 98613584.95389436,\n  \"notes\": \"pariatur in nostrud\",\n  \"certificates\": [\n    \"https://KqvIaennDZnRtcWyNkVgFobpE.okaCtb3yFbnoR7HuVicOF7foX\",\n    \"https://TFemSDaBJuZviYVdfqaGQRmf.dboY4bi.3zLNtBf25r4W85aATH0cXdQylvY5do39f\"\n  ]\n}",
+                "uid": "33439397-c5bbe9d1-bb64-4737-9bb8-10731e6fe245"
+              },
+              {
+                "id": "c5ea1c9f-4f22-473e-907d-73759fa500df",
+                "name": "Training record not found",
+                "originalRequest": {
+                  "method": "PUT",
+                  "header": [
+                    {
+                      "key": "Accept",
+                      "value": "application/json"
+                    }
+                  ],
+                  "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"status\": \"in-progress\",\n  \"progress\": \"poor\",\n  \"endDate\": \"2018-10-14\",\n  \"skills\": [\n    \"ex Lorem\",\n    \"eiusmod ut nulla irure\"\n  ],\n  \"notes\": \"in deserunt adipisicing magna ut\",\n  \"certificates\": [\n    \"http://rVAeJocYzidhPh.ecqhYmdLv,o5nbKuB,l8CcY0cfc\",\n    \"https://eNqjwIYkXCnXzHbcrPeLBiR.wrtOVsQN,2.Q8ftlx24JBRBDAd,qR\"\n  ]\n}",
+                    "options": {
+                      "raw": {
+                        "language": "json"
+                      }
+                    }
+                  },
+                  "url": {
+                    "raw": "{{baseUrl}}/training/records/:id",
+                    "host": [
+                      "{{baseUrl}}"
+                    ],
+                    "path": [
+                      "training",
+                      "records",
+                      ":id"
+                    ],
+                    "variable": [
+                      {
+                        "key": "id",
+                        "value": "urn:uuid:a066e792-11a6-c020-59e3-13c78d97415f",
+                        "description": "(Required) "
+                      }
+                    ]
+                  }
+                },
+                "status": "Not Found",
+                "code": 404,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "{\n  \"error\": \"labore\",\n  \"message\": \"occae\",\n  \"details\": {}\n}",
+                "uid": "33439397-c5ea1c9f-4f22-473e-907d-73759fa500df"
+              }
+            ],
+            "uid": "33439397-27673529-bc63-4356-ad3a-65600e6f59ed"
+          },
+          {
+            "name": "Get dog training progress",
+            "id": "210d2aed-97b1-4989-acef-1aaedc47c47c",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "GET",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                }
+              ],
+              "url": {
+                "raw": "{{baseUrl}}/training/dogs/:dogId/progress",
+                "host": [
+                  "{{baseUrl}}"
+                ],
+                "path": [
+                  "training",
+                  "dogs",
+                  ":dogId",
+                  "progress"
+                ],
+                "variable": [
+                  {
+                    "id": "579962de-2015-4729-a3ea-f468613fafd6",
+                    "key": "dogId",
+                    "value": "urn:uuid:a066e792-11a6-c020-59e3-13c78d97415f",
+                    "description": "(Required) "
+                  }
+                ]
+              },
+              "description": "Retrieve all training records and progress for a specific dog"
+            },
+            "response": [
+              {
+                "id": "9947608b-a5c4-4c7a-b59a-b5ddab514007",
+                "name": "Dog training progress summary",
+                "originalRequest": {
+                  "method": "GET",
+                  "header": [
+                    {
+                      "key": "Accept",
+                      "value": "application/json"
+                    }
+                  ],
+                  "url": {
+                    "raw": "{{baseUrl}}/training/dogs/:dogId/progress",
+                    "host": [
+                      "{{baseUrl}}"
+                    ],
+                    "path": [
+                      "training",
+                      "dogs",
+                      ":dogId",
+                      "progress"
+                    ],
+                    "variable": [
+                      {
+                        "key": "dogId",
+                        "value": "urn:uuid:a066e792-11a6-c020-59e3-13c78d97415f",
+                        "description": "(Required) "
+                      }
+                    ]
+                  }
+                },
+                "status": "OK",
+                "code": 200,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "{\n  \"dogId\": \"989194c2-62e3-ea12-c777-0111a76a87bf\",\n  \"totalTrainings\": 4273610,\n  \"completedTrainings\": 13021006,\n  \"inProgressTrainings\": -68702417,\n  \"overallProgress\": \"excellent\",\n  \"skills\": [\n    \"est Duis dolore velit\",\n    \"mollit dolore\"\n  ],\n  \"trainingRecords\": [\n    {\n      \"id\": \"urn:uuid:2f090bfa-a247-e6d7-e792-f15bb40b00e8\",\n      \"dogId\": \"urn:uuid:8a38e0ac-0c53-ea0a-6f39-2a735daaa04b\",\n      \"type\": \"agility\",\n      \"trainer\": \"ad qui\",\n      \"startDate\": \"1965-12-29\",\n      \"status\": \"discontinued\",\n      \"skills\": [\n        \"aliquip\",\n        \"amet dolor sunt veniam\"\n      ],\n      \"progress\": \"poor\",\n      \"createdAt\": \"2014-07-20T00:12:02.731Z\",\n      \"updatedAt\": \"1957-07-16T13:35:19.394Z\",\n      \"facility\": \"incididunt\",\n      \"endDate\": \"2002-04-14\",\n      \"cost\": 82018890.482764,\n      \"notes\": \"quis ut dolore pariatur aliquip\",\n      \"certificates\": [\n        \"http://qJihwYj.zakWR6U0a9GIApx8\",\n        \"http://eUvHzJkWexCsVJpmCsgZYeqERujjPISsV.sltCkvct3bBlajAedQNaWMFH2Uk\"\n      ]\n    },\n    {\n      \"id\": \"9adb117e-ef12-cb82-3915-2a732f9bd114\",\n      \"dogId\": \"urn:uuid:e3bea354-068f-88ed-cc66-9e2774e70398\",\n      \"type\": \"service\",\n      \"trainer\": \"sit non minim exercitation\",\n      \"startDate\": \"1998-07-21\",\n      \"status\": \"completed\",\n      \"skills\": [\n        \"enim sed in anim\",\n        \"ut\"\n      ],\n      \"progress\": \"excellent\",\n      \"createdAt\": \"1988-06-16T22:44:57.602Z\",\n      \"updatedAt\": \"1991-04-09T07:17:36.594Z\",\n      \"facility\": \"nisi esse culpa irure Lorem\",\n      \"endDate\": \"2000-06-19\",\n      \"cost\": 7207383.483311624,\n      \"notes\": \"consequat non ipsum sed in\",\n      \"certificates\": [\n        \"http://PbFlGJHHDcEsxYMHtapOOJuyvZinUshL.tqJRaVj+xmlFOd.1owVOOIa8.iP3ll2b\",\n        \"http://FUhgGykpZlSApOkuIB.addeFtD0O+LpTRE1CXhvhTC1NktdolDjS7q8SFdzSY+mvJb1Nh8Rqu1ywQ7zzYS\"\n      ]\n    }\n  ]\n}",
+                "uid": "33439397-9947608b-a5c4-4c7a-b59a-b5ddab514007"
+              },
+              {
+                "id": "fcfa8baa-f767-4af0-bbaf-5f1a52e0a9b3",
+                "name": "Dog not found",
+                "originalRequest": {
+                  "method": "GET",
+                  "header": [
+                    {
+                      "key": "Accept",
+                      "value": "application/json"
+                    }
+                  ],
+                  "url": {
+                    "raw": "{{baseUrl}}/training/dogs/:dogId/progress",
+                    "host": [
+                      "{{baseUrl}}"
+                    ],
+                    "path": [
+                      "training",
+                      "dogs",
+                      ":dogId",
+                      "progress"
+                    ],
+                    "variable": [
+                      {
+                        "key": "dogId",
+                        "value": "urn:uuid:a066e792-11a6-c020-59e3-13c78d97415f",
+                        "description": "(Required) "
+                      }
+                    ]
+                  }
+                },
+                "status": "Not Found",
+                "code": 404,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "{\n  \"error\": \"labore\",\n  \"message\": \"occae\",\n  \"details\": {}\n}",
+                "uid": "33439397-fcfa8baa-f767-4af0-bbaf-5f1a52e0a9b3"
+              }
+            ],
+            "uid": "33439397-210d2aed-97b1-4989-acef-1aaedc47c47c"
+          },
+          {
+            "name": "Get trainers",
+            "id": "08486787-070c-49f1-a912-8471f9ff2937",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "GET",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                }
+              ],
+              "url": {
+                "raw": "{{baseUrl}}/training/trainers",
+                "host": [
+                  "{{baseUrl}}"
+                ],
+                "path": [
+                  "training",
+                  "trainers"
+                ]
+              },
+              "description": "Retrieve a list of trainers and their specialties"
+            },
+            "response": [
+              {
+                "id": "358d27ea-c6ff-4ec6-81ca-229b880709cd",
+                "name": "List of trainers",
+                "originalRequest": {
+                  "method": "GET",
+                  "header": [
+                    {
+                      "key": "Accept",
+                      "value": "application/json"
+                    }
+                  ],
+                  "url": {
+                    "raw": "{{baseUrl}}/training/trainers",
+                    "host": [
+                      "{{baseUrl}}"
+                    ],
+                    "path": [
+                      "training",
+                      "trainers"
+                    ]
+                  }
+                },
+                "status": "OK",
+                "code": 200,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "{\n  \"trainers\": [\n    {\n      \"name\": \"reprehenderit pariatur\",\n      \"specialties\": [\n        \"consequat ut enim\",\n        \"nulla in laborum\"\n      ],\n      \"recordCount\": 63124554,\n      \"averageProgress\": \"excellent\",\n      \"facility\": \"amet\"\n    },\n    {\n      \"name\": \"minim aliqua\",\n      \"specialties\": [\n        \"occaecat incididunt ex\",\n        \"Duis ullamco\"\n      ],\n      \"recordCount\": -57275557,\n      \"averageProgress\": \"good\",\n      \"facility\": \"magna ut et\"\n    }\n  ]\n}",
+                "uid": "33439397-358d27ea-c6ff-4ec6-81ca-229b880709cd"
+              }
+            ],
+            "uid": "33439397-08486787-070c-49f1-a912-8471f9ff2937"
+          }
+        ],
+        "id": "abe86dcb-b635-455c-aa9f-0862e7596d8e",
+        "uid": "33439397-abe86dcb-b635-455c-aa9f-0862e7596d8e"
+      },
+      {
+        "name": "Welcome to Dog API",
+        "id": "cb0b6b6f-e977-4869-849e-df9263cc3f59",
+        "protocolProfileBehavior": {
+          "disableBodyPruning": true
+        },
+        "request": {
+          "method": "GET",
+          "header": [
+            {
+              "key": "Accept",
+              "value": "application/json"
+            }
+          ],
+          "url": {
+            "raw": "{{baseUrl}}/",
+            "host": [
+              "{{baseUrl}}"
+            ],
+            "path": [
+              ""
+            ]
+          }
+        },
+        "response": [
+          {
+            "id": "6ec1fabf-5901-46a7-970c-84ce4d89303d",
+            "name": "Welcome message",
+            "originalRequest": {
+              "method": "GET",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                }
+              ],
+              "url": {
+                "raw": "{{baseUrl}}/",
+                "host": [
+                  "{{baseUrl}}"
+                ],
+                "path": [
+                  ""
+                ]
+              }
+            },
+            "status": "OK",
+            "code": 200,
+            "_postman_previewlanguage": "json",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "cookie": [],
+            "responseTime": null,
+            "body": "{\n  \"message\": \"ut incididunt\",\n  \"version\": \"Lorem pariatur dolore\",\n  \"docs\": \"Ut consequat\"\n}",
+            "uid": "33439397-6ec1fabf-5901-46a7-970c-84ce4d89303d"
+          }
+        ],
+        "uid": "33439397-cb0b6b6f-e977-4869-849e-df9263cc3f59"
+      }
+    ],
+    "variable": [
+      {
+        "key": "baseUrl",
+        "value": "/",
+        "type": "string"
+      }
+    ]
+  }
+}
